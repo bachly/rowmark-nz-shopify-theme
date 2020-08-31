@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "css": "postcss css/tailwind.css -o assets/tailwind.css",
+    "download-theme": "theme download -p=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 -s=rowmarknz.myshopify.com",
     "watch-test": "theme watch --password=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 --notify=/.theme.update --themeid=109953515675",
     "watch-prod": "theme watch --password=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 --notify=/.theme.update --themeid=109950206107"
   },
