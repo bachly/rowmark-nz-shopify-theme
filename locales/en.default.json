@@ -37,6 +37,7 @@
     },
     "accessibility": {
       "cart": "View cart",
+      "call_us": "Call us",
       "menu": "Menu",
       "rss": "RSS",
       "search": "Search",
@@ -60,7 +61,7 @@
   },
   "footer": {
     "general": {
-      "copyright_html": "Copyright &copy; {{ year }} {{ shop_name }}.",
+      "copyright_html": "Copyright &copy; {{ year }} {{ shop_name }}. All rights reserved.",
       "follow_us": "Follow us"
     }
   },

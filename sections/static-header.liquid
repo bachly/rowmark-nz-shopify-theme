@@ -42,12 +42,6 @@
   }
 </script>
 
-<!--Adding phone number to header-->
-<div style="font-size: 18px;text-align: right;background: #0e3e6f;color: white;text-align: center;padding: 10px 0;">
-  <!--<img src="https://cdn.shopify.com/s/files/1/1005/5616/files/0e475bb9b17b3fa4f94f31fba1635b8f-telephone-call-icon-logo-by-vexels.png?4927015330825841283" alt="phone" style="width:26px;height:26px;">-->
-  <a style="color:white; font-weight: bold; text-decoration: none;" href="tel:1300023370">We are here to Help: 1300 023 370</a>
-</div>
-
 <section
   class="site-header"
   data-site-header-main
@@ -97,16 +91,21 @@
 
   </div>
 
-  <div class="site-header-cart">
-    <a class="site-header-cart--button" href="/cart">
-      <span
+  <div class="site-header-cart text-lg">
+    <div class="flex flex-row items-center h-full">
+      <a class="flex flex-row items-center sm:pr-2 md:pr-4 lg:pr-8" href="tel:{{ shop.phone }}">
+        <span class="mr-2">{% include 'icon-phone' %}</span>
+        <span class="hidden not-sr-only lg:block">{{ 'general.accessibility.call_us' | t }} {{ shop.phone }}</span>
+      </a>
+      <a class="flex flex-row items-center" href="/cart">
+        <span class="mr-2">{% include 'icon-cart' %}</span>
+        <span class="hidden not-sr-only lg:block">{{ 'general.accessibility.cart' | t }}</span>
+        <span
         class="site-header-cart--count {% if cart.item_count > 0 %}visible{% endif %}"
         data-header-cart-count="{% if cart.item_count > 0 %}{{ cart.item_count }}{% endif %}">
       </span>
-
-      {% include 'icon-cart' %}
-      <span class="">{{ 'general.accessibility.cart' | t }}</span>
-    </a>
+      </a>
+    </div>
   </div>
 </section>
 

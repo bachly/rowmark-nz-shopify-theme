@@ -549,6 +549,15 @@ $font-body: "Arimo", sans-serif;
 
 // Colors
 
+// Brand color
+$rowmark-blue-900: #00264c;
+$rowmark-blue-700: #014186;
+$rowmark-blue-600: #114989;
+$rowmark-blue-500: #1471c7;
+$rowmark-blue-400: #02a3e0;
+$rowmark-blue-300: #e0e8f2;
+$rowmark-green: #89c76a;
+
 // Backgrounds
 $color-background: color-transparent(#ffffff);
 
@@ -556,7 +565,7 @@ $color-background: color-transparent(#ffffff);
 $color-heading: #484848;
 $color-text: #4d4d4d;
 $color-text-hover: morph($color-text, 5);
-$color-link: #1471c7;
+$color-link: $rowmark-blue-500;
 $color-link-hover: morph($color-link, 3);
 
 // Buttons
@@ -567,12 +576,12 @@ $color-button-background-focus: morph($color-button-background);
 $color-button-disable: desaturate($color-button-background, 100%);
 
 // Header
-$color-header-text: #484848;
-$color-header-background: color-transparent(#ffffff);
+$color-header-text: #ffffff;
+$color-header-background: $rowmark-blue-900;
 
 // Footer
-$color-footer-text: #686868;
-$color-footer-background: color-transparent(#ffffff);
+$color-footer-text: #ffffff;
+$color-footer-background: $rowmark-blue-900;
 $color-footer-link: morph($color-footer-text);
 $color-footer-color-alt: transparentize($color-footer-text, 0.2);
 $color-additional-accent: transparentize($color-footer-text, 0.5);
@@ -656,13 +665,14 @@ $header-logo-max-width: 210px;
 $header-logo-image-max-width: 100px;
 
 $header-content-offset-right: 235px; // My account + Logout + Currency switcher
-$header-content-offset-left: 150px; // Equal to the max with of the logo on desktop
+$header-content-offset-left: 130px; // Equal to the max with of the logo on desktop
 
 $site-nav-item-space: 8px;
 $site-nav-link-space: 7px;
 $site-nav-link-space-vertical: 12px;
 $site-nav-link-space-horizontal: 15px;
 $site-subnav-space: 15px;
+$site-header-cart-width: 360px;
 
  // Header Settings
 $header-content-height: 46px;
@@ -2099,7 +2109,7 @@ h6 {
   transition: margin 0.15s $ease-bubble;
 
   @include media($min: $bp-large) {
-    margin-right: 140px;
+    margin-right: $site-header-cart-width;
     margin-left: 0;
 
     .site-header-sticky--scrolled & {
@@ -2284,6 +2294,7 @@ h6 {
 
   @include media($min: $bp-large) {
     right: $gutter-outer - 10px;
+    width: $site-header-cart-width;
   }
 
   svg {
@@ -2329,8 +2340,8 @@ $local-font-size-small: rem(13px);
 
 .site-footer-wrapper {
   z-index: $index-footer;
-  padding-top: 0;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-top: $space-xx-large;
   color: $color-footer-text;
   background: $color-footer-background;
@@ -2340,6 +2351,7 @@ $local-font-size-small: rem(13px);
     color: currentColor;
     text-decoration: none;
     transition: color 0.1s ease;
+    font-size: 1rem;
 
     &:hover {
       color: $color-footer-link;
@@ -2351,8 +2363,8 @@ $local-font-size-small: rem(13px);
   }
 
   @include media($min: $bp-large) {
-    padding-top: 0;
-    padding-bottom: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
@@ -2362,7 +2374,7 @@ $local-font-size-small: rem(13px);
 
 .site-footer-information {
   @extend %clearfix;
-  margin-top: 10px;
+  margin-top: 30px;
 
   a {
     color: $color-footer-color-alt;
@@ -2373,7 +2385,7 @@ $local-font-size-small: rem(13px);
   }
 
   @include media($min: $bp-large) {
-    margin-top: 10px;
+    margin-top: 50px;
   }
 
   .navmenu {
@@ -5909,7 +5921,7 @@ $local-footer-accent: rgba($color-footer-text, 0.15);
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
-    width: calc(21% - #{$space-medium * 3 / 4});
+    width: calc(25% - #{$space-medium * 3 / 4});
     padding-right: $space-medium;
     margin-right: $space-medium;
     border-bottom: 0;
@@ -5940,7 +5952,9 @@ $local-footer-accent: rgba($color-footer-text, 0.15);
   padding-bottom: $space-small;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: $font-h5-size;
+  font-size: $font-h4-size;
+  font-weight: bold;
+  text-transform: uppercase;
 
   @include media($max: $bp-large) {
     padding-top: $space-medium;
@@ -6313,7 +6327,7 @@ $local-image-width: rem(48px);
 
   @include media($min: $bp-large) {
     display: inline-block;
-    width: calc(100% - #{$header-content-offset-left});
+    width: calc(100% - #{$header-content-offset-left} - 20px);
     margin-top: 0;
     vertical-align: middle;
   }
@@ -7635,12 +7649,12 @@ $local-expander-width: rem(70px);
   color: currentColor;
   text-decoration: none;
   transition: height 0.23s $ease-bubble;
-  
-  display: flex;
-  align-items: center;
-  flex-flow: column;
-  justify-content: center;
-  text-align: center;
+
+  // display: flex;
+  // align-items: center;
+  // flex-flow: column;
+  // justify-content: center;
+  // text-align: center;
   z-index: 99;
   position: relative;
 

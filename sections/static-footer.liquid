@@ -1,7 +1,7 @@
 <script
   type="application/json"
   data-section-id="{{ section.id }}"
-  data-section-type="static-footer">
+  data-section-type="static-footer"></script>
 </script>
 
 <section class="site-footer-wrapper">
@@ -16,26 +16,22 @@
   {% endif %}
 
   <div class="site-footer-item">
-    <div class="site-footer-information">
+    <div class="site-footer-information border-t border-blue-900 pt-6">
       <div class="site-footer-left">
-
-        {% if linklists[section.settings.additional_menu].links != blank %}
-          <nav class="site-footer-navigation">
-            {%
-              include 'navmenu',
-              menu: section.settings.additional_menu,
-              depth: 1,
-              max_depth: 1
-            %}
-          </nav>
-        {% endif %}
-
-        <p class="site-footer-credits">
-          {% assign year = 'now' | date: '%Y' %}
-
-          {{ 'footer.general.copyright_html' | t: year: year, shop_name: shop.name }}
-          {{ powered_by_link }}
-        </p>
+          <div class="site-footer-credits text-center text-sm">
+            {% assign year = 'now' | date: '%Y' %}
+            {{ 'footer.general.copyright_html' | t: year: year, shop_name: shop.name }}
+          </div>
+          {% if linklists[section.settings.additional_menu].links != blank %}
+            <nav class="site-footer-navigation text-sm">
+              {%
+                include 'navmenu',
+                menu: section.settings.additional_menu,
+                depth: 1,
+                max_depth: 1
+              %}
+            </nav>
+          {% endif %}
       </div>
 
       {% if section.settings.payment_icons and shop.enabled_payment_types.size > 0 %}
