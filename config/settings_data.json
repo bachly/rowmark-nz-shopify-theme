@@ -31,7 +31,7 @@
     "social_vimeo": "",
     "social_youtube": "",
     "social_email": "sales@rowmark.com.au",
-    "favicon": "shopify:\/\/shop_images\/RowmarAustralia_Favicon_256x256_66f5debb-0e11-44d0-8bd7-9d5f4a94b7b7.png",
+    "favicon": "",
     "enable_currency_converter": false,
     "currency_display_format": "money_format",
     "currency_converter_currencies": "INR GBP CAD USD AUD EUR JPY",
@@ -72,7 +72,7 @@
           "home-promo-mosaic-4": {
             "type": "promotion",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Rowmark-Australia-Sample-Kit-2.jpg",
+              "image": "",
               "title": "Sample Pack",
               "text": "",
               "color": "#ffffff",
@@ -120,25 +120,25 @@
           "1507355298965": {
             "type": "meganav",
             "settings": {
-              "menu": "laser-and-rotary-engravable"
+              "menu": ""
             }
           },
           "1501309377102": {
             "type": "meganav",
             "settings": {
-              "menu": "laserable-and-rotary-engravable-materials-cont"
+              "menu": ""
             }
           },
           "1501309392427": {
             "type": "meganav",
             "settings": {
-              "menu": "rotary-engravable-materials"
+              "menu": ""
             }
           },
           "1508899234332": {
             "type": "meganav",
             "settings": {
-              "menu": "material-sample-kits"
+              "menu": ""
             }
           }
         },
@@ -150,12 +150,12 @@
         ],
         "settings": {
           "sticky_header": true,
-          "logo": "shopify:\/\/shop_images\/Rowmark-Australia-Logo.png",
+          "logo": "",
           "enable_live_search": true,
           "enable_live_search_images": true,
           "enable_live_search_articles_pages": false,
-          "quick_links": "quick-links",
-          "menu": "top-navigation",
+          "quick_links": "",
+          "menu": "",
           "meganav_trigger": "products"
         }
       },
@@ -165,10 +165,17 @@
           "1516620569247": {
             "type": "social_accounts",
             "settings": {}
+          },
+          "1598863128826": {
+            "type": "menu",
+            "settings": {
+              "menu": "main-menu"
+            }
           }
         },
         "block_order": [
-          "1516620569247"
+          "1516620569247",
+          "1598863128826"
         ],
         "settings": {
           "payment_icons": true,
@@ -189,35 +196,35 @@
           "1508900276153": {
             "type": "menu",
             "settings": {
-              "menu": "laser-and-rotary-engravable",
+              "menu": "",
               "image": ""
             }
           },
           "1501312562998-0": {
             "type": "menu",
             "settings": {
-              "menu": "laserable-and-rotary-engravable-materials-cont",
+              "menu": "",
               "image": ""
             }
           },
           "1501312562998-1": {
             "type": "menu",
             "settings": {
-              "menu": "rotary-engravable-materials",
+              "menu": "",
               "image": ""
             }
           },
           "1501312562998-2": {
             "type": "menu",
             "settings": {
-              "menu": "front-engravable",
+              "menu": "",
               "image": ""
             }
           },
           "1501312562998-3": {
             "type": "menu",
             "settings": {
-              "menu": "reverse-engravable",
+              "menu": "",
               "image": ""
             }
           }
@@ -302,7 +309,7 @@
           "1516619100836-0": {
             "type": "promotion",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Rowmark-Australia-Sample-Kit-2.jpg",
+              "image": "",
               "title": "Sample Pack",
               "text": "2000 benchmark products, 568 colours, 28 product lines, 5 popular finishes.",
               "color": "#ffffff",
@@ -315,7 +322,7 @@
           "1516619100836-1": {
             "type": "promotion",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SES_9215_GIF.gif",
+              "image": "",
               "title": "Contact Us",
               "text": "Need help in selecting the best product for your project? Talk to us today.",
               "color": "#ffffff",
@@ -332,7 +339,7 @@
         ],
         "settings": {
           "title": "",
-          "section_height": "medium"
+          "section_height": "small"
         }
       },
       "1516620454948": {
@@ -351,28 +358,28 @@
           "1518256632211": {
             "type": "menu",
             "settings": {
-              "menu": "laser-and-rotary-engravable",
+              "menu": "",
               "image": ""
             }
           },
           "1518256641864": {
             "type": "menu",
             "settings": {
-              "menu": "laserable-and-rotary-engravable-materials-cont",
+              "menu": "",
               "image": ""
             }
           },
           "1518256651381": {
             "type": "menu",
             "settings": {
-              "menu": "rotary-engravable-materials",
+              "menu": "",
               "image": ""
             }
           },
           "1518256670368": {
             "type": "menu",
             "settings": {
-              "menu": "material-sample-kits",
+              "menu": "",
               "image": ""
             }
           }
@@ -393,12 +400,12 @@
           "1525838249735-2": {
             "type": "promotion",
             "settings": {
-              "image": "shopify:\/\/shop_images\/New_web_page_image_1_GIF.gif",
-              "title": "Rowmark Australia",
-              "text": "Rowmark is the Number One Choice for Laser, Rotary Engraving & UV Printable materials, sublimation Metals and engravable Gifts",
+              "image": "",
+              "title": "Product Catalog",
+              "text": "Find Laser, Rotary Engraving & UV Printable materials, sublimation metals and engravabale gifts",
               "color": "#ffffff",
               "block_link": "shopify:\/\/collections",
-              "button_text": "Product Catalogue",
+              "button_text": "View Product Catalog",
               "button_style": "secondary",
               "promo_width": "half-width"
             }
@@ -406,12 +413,12 @@
           "1525838249735-3": {
             "type": "promotion",
             "settings": {
-              "image": "shopify:\/\/shop_images\/New_web_page_image_2_GIF.gif",
-              "title": "Color Chart",
-              "text": "",
+              "image": "",
+              "title": "Colour Chart",
+              "text": "View and download all-in-one Colour Chart",
               "color": "#ffffff",
               "block_link": "https:\/\/rowmark.com.au\/pages\/color-chart",
-              "button_text": "Click here",
+              "button_text": "View Colour Chart",
               "button_style": "secondary",
               "promo_width": "half-width"
             }
@@ -423,7 +430,7 @@
         ],
         "settings": {
           "title": "",
-          "section_height": "large"
+          "section_height": "small"
         }
       },
       "static-article": {
@@ -440,14 +447,14 @@
           "1591078072724": {
             "type": "slider",
             "settings": {
-              "banner": "shopify:\/\/shop_images\/legs-running-on-track.jpg",
+              "banner": "",
               "alt": ""
             }
           },
           "1591078094913": {
             "type": "slider",
             "settings": {
-              "banner": "shopify:\/\/shop_images\/bearded-young-man.jpg",
+              "banner": "",
               "alt": ""
             }
           }
@@ -457,6 +464,12 @@
           "1591078094913"
         ],
         "settings": {}
+      },
+      "static-404": {
+        "type": "static-404",
+        "settings": {
+          "continue_url": "shopify:\/\/collections\/all"
+        }
       }
     },
     "content_for_index": [
