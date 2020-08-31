@@ -1,0 +1,69 @@
+{% assign customerAllowedToSeePriceAndPlaceOrder = false %} 
+{% if customer and customer.tags contains "Account Customer" %}
+  {% assign customerAllowedToSeePriceAndPlaceOrder = true %}
+{% endif %}
+
+{% if customerAllowedToSeePriceAndPlaceOrder %}
+<div class="product-addons-cutting-adhesive">
+    <div class="column__half"> 
+            <h3><u>Quantity discounts</u></h3>
+            Your Rowmark account needs to be activated to use checkout.
+            <br/><strong>All quantity discounts and freight charges will be applied at point of invoice.</strong></p>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Quantity</td>
+                        <td>Discount</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1-9 sheets</td>
+                        <td>R.R.P.</td>
+                    </tr>
+                    <tr>
+                        <td>10-19 sheets</td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>20-49 sheets</td>
+                        <td>7.5%</td>
+                    </tr>
+                    <tr>
+                        <td>50-99 sheets</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>100+ sheets</td>
+                        <td>POA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+<div class="column__half">
+    <h3><u>Adhesive options</u></h3>
+    <table>
+        <thead>
+            <tr>
+                <td>Option</td>
+                <td>Fee</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tesa Tape 60985</td>
+                <td>$20 per sheet + GST</td>
+            </tr>
+            <tr>
+                <td>3M 467 Tape</td>
+                <td>$24 per sheet + GST</td>
+            </tr>
+            <tr>
+                <td>3M 468 Tape</td>
+                <td>$28 per sheet + GST</td>
+            </tr>
+        </tbody>
+    </table>
+</column>
+</div>
+{% endif %}

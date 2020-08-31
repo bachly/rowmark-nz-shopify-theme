@@ -1,0 +1,16 @@
+{
+    "name": "rowmark-nz-shopify-theme",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "css": "postcss css/tailwind.css -o assets/tailwind.css"
+    },
+    "private": true,
+    "dependencies": {
+      "autoprefixer": "^9.6.1",
+      "postcss-cli": "^6.1.2",
+      "tailwindcss": "^1.0.4"
+    }
+  }
+  

@@ -1,0 +1,34 @@
+{{ "tailwind.css" | asset_url | stylesheet_tag }}
+
+<div id="template.page.landing" class="text-blue-800">
+  <section>
+    <div class="container mx-auto">
+      <section class="py-12 flex">
+        <div class="w-1/2">
+          <h1 class="font-black text-5xl mb-2">{{ page.title }}</h1>
+          {% if page.content != blank %}
+            <div class="page-description">
+            {{ page.content }}
+            </div>
+          {% endif %}
+          </p>
+        </div>
+        <div class="w-1/2">
+          <div class="mt-4 max-w-md mx-auto hidden">
+            <h3 class="font-bold text-xl">On this page</h3>
+            <ul class="text-lg">
+              <li class="block"><a class="text-blue-500" href="#laser-settings">Laser Settings &amp; Colour Charts</a></li>
+              <li class="block"><a class="text-blue-500" href="#engraving-videos">Engraving Videos</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="py-12 bg-gray-100">
+    <div class="container mx-auto">
+      <iframe class="airtable-embed" src="https://airtable.com/embed/shr36wBq5FKoTZSzR?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+    </div>
+  </section>
+</div>

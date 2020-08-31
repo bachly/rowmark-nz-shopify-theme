@@ -1,0 +1,855 @@
+{
+  "current": {
+    "color_background": "#ffffff",
+    "color_headings": "#484848",
+    "color_text": "#4d4d4d",
+    "color_links": "#1471c7",
+    "color_button_background": "#58a34b",
+    "color_button_text": "#ffffff",
+    "color_header_background": "#ffffff",
+    "color_header_text": "#484848",
+    "color_footer_background": "#ffffff",
+    "color_footer_text": "#686868",
+    "font_body": "Google_Roboto_400,400i,700,700i",
+    "font_heading": "Google_Roboto_400,400i,700,700i",
+    "product_show_vendor": false,
+    "product_sales_badge": false,
+    "product_sales_badge_style": "percentile",
+    "product_ratings_reviews": false,
+    "product_social_sharing": false,
+    "product_cart_redirect": false,
+    "product_grid_emphasize_price": false,
+    "product_grid_image_style": "cropped-medium",
+    "product_grid_quick_look": false,
+    "product_grid_quick_buy": true,
+    "social_facebook": "https:\/\/www.facebook.com\/RowmarkAustralia\/",
+    "social_twitter": "https:\/\/twitter.com\/RowmarkAU",
+    "social_google": "",
+    "social_pinterest": "https:\/\/au.pinterest.com\/rowmarkaus\/",
+    "social_instagram": "https:\/\/www.instagram.com\/rowmarkau\/",
+    "social_tumblr": "",
+    "social_vimeo": "",
+    "social_youtube": "",
+    "social_email": "sales@rowmark.com.au",
+    "favicon": "shopify:\/\/shop_images\/RowmarAustralia_Favicon_256x256_66f5debb-0e11-44d0-8bd7-9d5f4a94b7b7.png",
+    "enable_currency_converter": false,
+    "currency_display_format": "money_format",
+    "currency_converter_currencies": "INR GBP CAD USD AUD EUR JPY",
+    "currency_converter_default": "AUD",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#1990c6",
+    "checkout_button_color": "#1990c6",
+    "checkout_error_color": "#ff6d6d",
+    "sections": {
+      "static-collection": {
+        "type": "static-collection",
+        "settings": {
+          "show_collection_image": false,
+          "products_per_page": "80",
+          "sort_by": true,
+          "show_by": false,
+          "show_sidebar": true,
+          "filter_style": "groups",
+          "filter_limit": "10",
+          "filter_position": "above_menus",
+          "menu_depth": "2"
+        }
+      },
+      "home-promo-mosaic": {
+        "type": "dynamic-promo-mosaic",
+        "disabled": true,
+        "blocks": {
+          "home-promo-mosaic-4": {
+            "type": "promotion",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rowmark-Australia-Sample-Kit-2.jpg",
+              "title": "Sample Pack",
+              "text": "",
+              "color": "#ffffff",
+              "block_link": "shopify:\/\/pages\/order-sample-pack",
+              "button_text": "Order FREE",
+              "button_style": "primary"
+            }
+          },
+          "1508724380943": {
+            "type": "promotion",
+            "settings": {
+              "image": "",
+              "title": "Contact us",
+              "text": "Need help in selecting the best product for your project? Talk to us today.",
+              "color": "#ffffff",
+              "block_link": "shopify:\/\/pages\/contact-us",
+              "button_text": "Contact",
+              "button_style": "primary"
+            }
+          }
+        },
+        "block_order": [
+          "home-promo-mosaic-4",
+          "1508724380943"
+        ],
+        "settings": {
+          "title": "",
+          "section_height": "medium"
+        }
+      },
+      "home-blog-posts": {
+        "type": "dynamic-blog-posts",
+        "disabled": true,
+        "settings": {
+          "title": "News",
+          "blog": "news",
+          "show_date": true,
+          "show_author": false,
+          "show_excerpt": true
+        }
+      },
+      "static-header": {
+        "type": "static-header",
+        "blocks": {
+          "1507355298965": {
+            "type": "meganav",
+            "settings": {
+              "menu": "laser-and-rotary-engravable"
+            }
+          },
+          "1501309377102": {
+            "type": "meganav",
+            "settings": {
+              "menu": "laserable-and-rotary-engravable-materials-cont"
+            }
+          },
+          "1501309392427": {
+            "type": "meganav",
+            "settings": {
+              "menu": "rotary-engravable-materials"
+            }
+          },
+          "1508899234332": {
+            "type": "meganav",
+            "settings": {
+              "menu": "material-sample-kits"
+            }
+          }
+        },
+        "block_order": [
+          "1507355298965",
+          "1501309377102",
+          "1501309392427",
+          "1508899234332"
+        ],
+        "settings": {
+          "sticky_header": true,
+          "logo": "shopify:\/\/shop_images\/Rowmark-Australia-Logo.png",
+          "enable_live_search": true,
+          "enable_live_search_images": true,
+          "enable_live_search_articles_pages": false,
+          "quick_links": "quick-links",
+          "menu": "top-navigation",
+          "meganav_trigger": "products"
+        }
+      },
+      "static-footer": {
+        "type": "static-footer",
+        "blocks": {
+          "1516620569247": {
+            "type": "social_accounts",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "1516620569247"
+        ],
+        "settings": {
+          "payment_icons": true,
+          "additional_menu": "footer"
+        }
+      },
+      "static-product": {
+        "type": "static-product",
+        "settings": {
+          "layout": "layout--two-col",
+          "enable_related_products": true
+        }
+      },
+      "1501312562998": {
+        "type": "dynamic-menu-list",
+        "disabled": true,
+        "blocks": {
+          "1508900276153": {
+            "type": "menu",
+            "settings": {
+              "menu": "laser-and-rotary-engravable",
+              "image": ""
+            }
+          },
+          "1501312562998-0": {
+            "type": "menu",
+            "settings": {
+              "menu": "laserable-and-rotary-engravable-materials-cont",
+              "image": ""
+            }
+          },
+          "1501312562998-1": {
+            "type": "menu",
+            "settings": {
+              "menu": "rotary-engravable-materials",
+              "image": ""
+            }
+          },
+          "1501312562998-2": {
+            "type": "menu",
+            "settings": {
+              "menu": "front-engravable",
+              "image": ""
+            }
+          },
+          "1501312562998-3": {
+            "type": "menu",
+            "settings": {
+              "menu": "reverse-engravable",
+              "image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1508900276153",
+          "1501312562998-0",
+          "1501312562998-1",
+          "1501312562998-2",
+          "1501312562998-3"
+        ],
+        "settings": {
+          "title": "Products"
+        }
+      },
+      "static-list-collections": {
+        "type": "static-list-collections",
+        "settings": {}
+      },
+      "static-blog": {
+        "type": "static-blog",
+        "settings": {
+          "show_rss_link": true,
+          "show_date": true,
+          "show_author": false,
+          "show_excerpt": true,
+          "featured_post": "",
+          "posts_per_page": "12"
+        }
+      },
+      "static-cart": {
+        "type": "static-cart",
+        "settings": {
+          "show_continue_link": true,
+          "continue_url": "shopify:\/\/collections\/all",
+          "enable_order_notes": true,
+          "enable_shipping_calc": false,
+          "shipping_calc_default_country": "Australia"
+        }
+      },
+      "1516618966163": {
+        "type": "dynamic-promo-mosaic",
+        "disabled": true,
+        "blocks": {
+          "1516618966163-0": {
+            "type": "promotion",
+            "settings": {
+              "image": "",
+              "title": "Rowmark Australia",
+              "text": "Official distributor of Laser, Rotary Engraving, UV Printable materials for all applications.",
+              "color": "#ffffff",
+              "block_link": "shopify:\/\/collections\/all",
+              "button_text": "Product Catalog",
+              "button_style": "secondary"
+            }
+          },
+          "1521156846300": {
+            "type": "promotion",
+            "settings": {
+              "image": "",
+              "title": "Rowmark Australia Color Chart",
+              "text": "",
+              "color": "#ffffff",
+              "block_link": "https:\/\/drive.google.com\/open?id=1TY-SyLvQtUAfF2Yb4BHvfi1g1h5aDCLU",
+              "button_text": "Click here",
+              "button_style": "secondary"
+            }
+          }
+        },
+        "block_order": [
+          "1516618966163-0",
+          "1521156846300"
+        ],
+        "settings": {
+          "title": "",
+          "section_height": "medium"
+        }
+      },
+      "1516619100836": {
+        "type": "dynamic-promo-grid",
+        "blocks": {
+          "1516619100836-0": {
+            "type": "promotion",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rowmark-Australia-Sample-Kit-2.jpg",
+              "title": "Sample Pack",
+              "text": "2000 benchmark products, 568 colours, 28 product lines, 5 popular finishes.",
+              "color": "#ffffff",
+              "block_link": "shopify:\/\/pages\/order-sample-pack",
+              "button_text": "Request Your Complimentary Sample Pack",
+              "button_style": "secondary",
+              "promo_width": "half-width"
+            }
+          },
+          "1516619100836-1": {
+            "type": "promotion",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SES_9215_GIF.gif",
+              "title": "Contact Us",
+              "text": "Need help in selecting the best product for your project? Talk to us today.",
+              "color": "#ffffff",
+              "block_link": "shopify:\/\/pages\/contact-us",
+              "button_text": "Contact Us",
+              "button_style": "secondary",
+              "promo_width": "half-width"
+            }
+          }
+        },
+        "block_order": [
+          "1516619100836-0",
+          "1516619100836-1"
+        ],
+        "settings": {
+          "title": "",
+          "section_height": "medium"
+        }
+      },
+      "1516620454948": {
+        "type": "dynamic-twitter-feed",
+        "disabled": true,
+        "settings": {
+          "title": "Twitter Feeds",
+          "username": "RowmarkAU",
+          "retweets": true,
+          "images": true
+        }
+      },
+      "dynamic-menu-list": {
+        "type": "dynamic-menu-list",
+        "blocks": {
+          "1518256632211": {
+            "type": "menu",
+            "settings": {
+              "menu": "laser-and-rotary-engravable",
+              "image": ""
+            }
+          },
+          "1518256641864": {
+            "type": "menu",
+            "settings": {
+              "menu": "laserable-and-rotary-engravable-materials-cont",
+              "image": ""
+            }
+          },
+          "1518256651381": {
+            "type": "menu",
+            "settings": {
+              "menu": "rotary-engravable-materials",
+              "image": ""
+            }
+          },
+          "1518256670368": {
+            "type": "menu",
+            "settings": {
+              "menu": "material-sample-kits",
+              "image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1518256632211",
+          "1518256641864",
+          "1518256651381",
+          "1518256670368"
+        ],
+        "settings": {
+          "title": "Rowmark Product Selection"
+        }
+      },
+      "1525838249735": {
+        "type": "dynamic-promo-grid",
+        "blocks": {
+          "1525838249735-2": {
+            "type": "promotion",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/New_web_page_image_1_GIF.gif",
+              "title": "Rowmark Australia",
+              "text": "Rowmark is the Number One Choice for Laser, Rotary Engraving & UV Printable materials, sublimation Metals and engravable Gifts",
+              "color": "#ffffff",
+              "block_link": "shopify:\/\/collections",
+              "button_text": "Product Catalogue",
+              "button_style": "secondary",
+              "promo_width": "half-width"
+            }
+          },
+          "1525838249735-3": {
+            "type": "promotion",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/New_web_page_image_2_GIF.gif",
+              "title": "Color Chart",
+              "text": "",
+              "color": "#ffffff",
+              "block_link": "https:\/\/rowmark.com.au\/pages\/color-chart",
+              "button_text": "Click here",
+              "button_style": "secondary",
+              "promo_width": "half-width"
+            }
+          }
+        },
+        "block_order": [
+          "1525838249735-2",
+          "1525838249735-3"
+        ],
+        "settings": {
+          "title": "",
+          "section_height": "large"
+        }
+      },
+      "static-article": {
+        "type": "static-article",
+        "settings": {
+          "show_date": true,
+          "show_author": true,
+          "use_share_buttons": true
+        }
+      },
+      "webflow-slider": {
+        "type": "webflow-slider",
+        "blocks": {
+          "1591078072724": {
+            "type": "slider",
+            "settings": {
+              "banner": "shopify:\/\/shop_images\/legs-running-on-track.jpg",
+              "alt": ""
+            }
+          },
+          "1591078094913": {
+            "type": "slider",
+            "settings": {
+              "banner": "shopify:\/\/shop_images\/bearded-young-man.jpg",
+              "alt": ""
+            }
+          }
+        },
+        "block_order": [
+          "1591078072724",
+          "1591078094913"
+        ],
+        "settings": {}
+      }
+    },
+    "content_for_index": [
+      "1525838249735",
+      "1516619100836",
+      "1516618966163",
+      "home-promo-mosaic",
+      "1501312562998",
+      "home-blog-posts",
+      "1516620454948"
+    ]
+  },
+  "presets": {
+    "Supply": {
+      "color_background": "#ffffff",
+      "color_headings": "#222222",
+      "color_text": "#4d4d4d",
+      "color_links": "#29927d",
+      "color_button_background": "#ffab41",
+      "color_button_text": "#1a390c",
+      "color_header_background": "#30656b",
+      "color_header_text": "#ffffff",
+      "color_footer_background": "#f8f8f8",
+      "color_footer_text": "#5c5c5c",
+      "font_body": "Google_Cabin_400,400i,700,700i",
+      "font_heading": "Google_Cabin_400,400i,700,700i",
+      "sections": {
+        "home-promo-mosaic": {
+          "type": "dynamic-promo-mosaic",
+          "blocks": {
+            "promo-mosaic-block-1": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "promo-mosaic-block-2": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "promo-mosaic-block-3": {
+              "type": "promotion",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "promo-mosaic-block-1",
+            "promo-mosaic-block-2",
+            "promo-mosaic-block-3"
+          ],
+          "settings": {}
+        },
+        "home-blog-posts": {
+          "type": "dynamic-blog-posts",
+          "settings": {}
+        },
+        "home-twitter-feed": {
+          "type": "dynamic-twitter-feed",
+          "settings": {}
+        },
+        "home-featured-collection-1": {
+          "type": "dynamic-featured-collection",
+          "settings": {}
+        },
+        "home-promo-grid": {
+          "type": "dynamic-promo-grid",
+          "blocks": {
+            "promo-grid-block-1": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "promo-grid-block-2": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "promo-grid-block-3": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "promo-grid-block-4": {
+              "type": "promotion",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "promo-grid-block-1",
+            "promo-grid-block-2",
+            "promo-grid-block-3",
+            "promo-grid-block-4"
+          ],
+          "settings": {}
+        },
+        "home-featured-collection-2": {
+          "type": "dynamic-featured-collection",
+          "settings": {
+            "title": ""
+          }
+        }
+      },
+      "content_for_index": [
+        "home-promo-mosaic",
+        "home-promo-grid",
+        "home-featured-collection-1",
+        "home-featured-collection-2",
+        "home-blog-posts",
+        "home-twitter-feed"
+      ]
+    },
+    "Graphic": {
+      "color_background": "#ffffff",
+      "color_headings": "#484848",
+      "color_text": "#4d4d4d",
+      "color_links": "#e32619",
+      "color_button_background": "#e32619",
+      "color_button_text": "#ffffff",
+      "color_header_background": "#ffffff",
+      "color_header_text": "#484848",
+      "color_footer_background": "#ffffff",
+      "color_footer_text": "#686868",
+      "font_body": "Google_Cabin_400,400i,700,700i",
+      "font_heading": "Google_Cabin_400,400i,700,700i",
+      "sections": {
+        "static-collection": {
+          "type": "static-collection",
+          "settings": {
+            "filter_style": "groups",
+            "filter_limit": "5"
+          }
+        },
+        "home-promo-mosaic": {
+          "type": "dynamic-promo-mosaic",
+          "blocks": {
+            "home-promo-mosaic-1": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "home-promo-mosaic-2": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "home-promo-mosaic-3": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "home-promo-mosaic-4": {
+              "type": "promotion",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "home-promo-mosaic-1",
+            "home-promo-mosaic-2",
+            "home-promo-mosaic-3",
+            "home-promo-mosaic-4"
+          ],
+          "settings": {}
+        },
+        "home-promo-grid": {
+          "type": "dynamic-promo-grid",
+          "blocks": {
+            "home-promo-grid-1": {
+              "type": "promotion",
+              "settings": {
+                "promo_width": "full-width"
+              }
+            },
+            "home-promo-grid-2": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "home-promo-grid-3": {
+              "type": "promotion",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "home-promo-grid-1",
+            "home-promo-grid-2",
+            "home-promo-grid-3"
+          ],
+          "settings": {}
+        },
+        "home-featured-collection-1": {
+          "type": "dynamic-featured-collection",
+          "settings": {}
+        },
+        "home-menu-list": {
+          "type": "dynamic-menu-list",
+          "blocks": {
+            "home-menu-list-1": {
+              "type": "menu",
+              "settings": {}
+            },
+            "home-menu-list-2": {
+              "type": "menu",
+              "settings": {}
+            },
+            "home-menu-list-3": {
+              "type": "menu",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "home-menu-list-1",
+            "home-menu-list-2",
+            "home-menu-list-3"
+          ],
+          "settings": {
+            "title": "Menu list"
+          }
+        },
+        "home-blog-posts": {
+          "type": "dynamic-blog-posts",
+          "settings": {}
+        },
+        "home-twitter-feed": {
+          "type": "dynamic-twitter-feed",
+          "settings": {}
+        },
+        "home-instagram-feed": {
+          "type": "dynamic-instagram-feed",
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "home-promo-mosaic",
+        "home-promo-grid",
+        "home-featured-collection-1",
+        "home-menu-list",
+        "home-blog-posts",
+        "home-instagram-feed",
+        "home-twitter-feed"
+      ]
+    },
+    "Industrial": {
+      "color_background": "#ffffff",
+      "color_headings": "#4c4c4c",
+      "color_text": "#4c5154",
+      "color_links": "#0076de",
+      "color_button_background": "#0076de",
+      "color_button_text": "#ffffff",
+      "color_header_background": "#1d2236",
+      "color_header_text": "#ffffff",
+      "color_footer_background": "#edeff3",
+      "color_footer_text": "#5c5c5c",
+      "font_body": "Google_Libre+Franklin_400,400i,700,700i",
+      "font_heading": "Google_Arimo_400,400i,700,700i",
+      "sections": {
+        "static-header": {
+          "type": "static-header",
+          "settings": {}
+        },
+        "static-footer": {
+          "type": "static-footer",
+          "blocks": {
+            "static-footer-1": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "static-footer-3": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "static-footer-1",
+            "static-footer-3"
+          ],
+          "settings": {
+            "additional_menu": ""
+          }
+        },
+        "static-blog": {
+          "type": "static-blog",
+          "settings": {
+            "show_author": false
+          }
+        },
+        "static-product": {
+          "type": "static-product",
+          "settings": {
+            "layout": "layout--three-col"
+          }
+        },
+        "static-article": {
+          "type": "static-article",
+          "settings": {
+            "show_author": false
+          }
+        },
+        "static-collection": {
+          "type": "static-collection",
+          "settings": {
+            "filter_style": "groups"
+          }
+        },
+        "home-promo-mosaic": {
+          "type": "dynamic-promo-mosaic",
+          "blocks": {
+            "home-promo-mosaic-1": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "home-promo-mosaic-2": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "home-promo-mosaic-3": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "home-promo-mosaic-4": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "home-promo-mosaic-5": {
+              "type": "promotion",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "home-promo-mosaic-1",
+            "home-promo-mosaic-2",
+            "home-promo-mosaic-3",
+            "home-promo-mosaic-4",
+            "home-promo-mosaic-5"
+          ],
+          "settings": {
+            "section_height": "medium"
+          }
+        },
+        "home-featured-collection": {
+          "type": "dynamic-featured-collection",
+          "settings": {}
+        },
+        "home-promo-grid": {
+          "type": "dynamic-promo-grid",
+          "blocks": {
+            "home-promo-grid-1": {
+              "type": "promotion",
+              "settings": {}
+            },
+            "home-promo-grid-2": {
+              "type": "promotion",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "home-promo-grid-1",
+            "home-promo-grid-2"
+          ],
+          "settings": {}
+        },
+        "home-blog-posts": {
+          "type": "dynamic-blog-posts",
+          "settings": {}
+        },
+        "home-collection-list": {
+          "type": "dynamic-collection-list",
+          "blocks": {
+            "home-collection-list-1": {
+              "type": "collection",
+              "settings": {}
+            },
+            "home-collection-list-2": {
+              "type": "collection",
+              "settings": {}
+            },
+            "home-collection-list-3": {
+              "type": "collection",
+              "settings": {}
+            },
+            "home-collection-list-4": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "home-collection-list-1",
+            "home-collection-list-2",
+            "home-collection-list-3",
+            "home-collection-list-4"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "home-promo-mosaic",
+        "home-featured-collection",
+        "home-promo-grid",
+        "home-collection-list",
+        "home-blog-posts"
+      ]
+    }
+  }
+}

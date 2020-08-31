@@ -1,0 +1,48 @@
+{% assign using_linklist = false %}
+{% assign pagination = 12 %}
+{% assign linklist = 'all-collections' %}
+
+{% if linklists[linklist] and linklists[linklist].links.size > 0 %}
+  {% assign using_linklist = true %}
+  {% assign pagination = 80 %}
+{% endif %}
+
+<div class="page-content">
+  <h2>Colour chart 2017</h2>
+  <p>You can download a copy of our 2017 colour chart from the following link along with details on several products that may be of interest.</p>
+  <p><a class="button-primary" href="https://cdn.shopify.com/s/files/1/1005/5616/files/colorchart_2017.pdf?7142822167877189501"><i class="fa fa-download" aria-hidden="true"></i> Download the Colour Chart 2017</a></p>
+</div>
+
+{% comment %}
+{% include 'breadcrumbs' %}
+
+{% paginate collections by pagination %}
+  <div class="listcollections--container">
+    <div class="listcollections--inner">
+      {% if using_linklist %}
+        {% for link in linklists[linklist].links %}
+          {% assign link_handle = link.handle %}
+          {% assign collection = collections[link_handle] %}
+          {% include 'collection-list-item' %}
+        {% endfor %}
+      {% else %}
+        {% for collection in collections %}
+          {% include 'collection-list-item' %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% include 'pagination' %}
+{% endpaginate %}
+
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "Collections",
+  "class": "listcollections--section",
+  "settings": []
+}
+
+{% endschema %}

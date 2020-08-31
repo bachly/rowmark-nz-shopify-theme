@@ -1,0 +1,15 @@
+{% comment %}
+  Display SKUs for all variants of a product
+
+  @param product
+{% endcomment %}
+
+<div class="product-variants-sku">
+    {% for variant in product.variants %}
+  		{% if variant.option2 contains "Full" or variant.option2 contains "EA" or variant.option1 contains "PKG"%}
+          {% if variant.sku %}
+              {{ variant.sku }} <br/>
+          {% endif %}
+  		{% endif %}
+    {% endfor %}
+</div>

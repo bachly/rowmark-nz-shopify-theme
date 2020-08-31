@@ -1,0 +1,48 @@
+<div data-animation="slide" data-duration="500" data-infinite="1" class="slider w-slider">
+  <div class="w-slider-mask">
+    {% for block in section.blocks %}
+    <div class="slide w-slide" {{ block.shopify_attributes }} style="background-image: url( {{ block.settings.banner | img_url: '960x480'  }})"></div>
+    {% endfor %}
+<!--     'wrist-watches.jpg'
+    <div class="slide-2 w-slide" style="background-image: url( {{'watches-in-black-white.jpg' | asset_url }})"></div> -->
+  </div>
+  <div class="w-slider-arrow-left">
+    <div class="w-icon-slider-left"></div>
+  </div>
+  <div class="w-slider-arrow-right">
+    <div class="w-icon-slider-right"></div>
+  </div>
+  <div class="w-slider-nav w-round"></div>
+</div>
+
+{% schema %}
+  {
+    "name": "Webflow Slider",
+    "settings": [],
+    "max_blocks": 3,
+	"blocks": [
+      {
+        "type": "slider",
+        "name": "Slider",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "banner",
+            "label": "Banner"
+          },
+          {
+            "type": "text",
+            "id": "alt",
+            "label": "Alt text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

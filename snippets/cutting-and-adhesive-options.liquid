@@ -1,0 +1,77 @@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+{%comment%}
+<script type="text/javascript">
+  $('#infiniteoptions-container').hide();  
+  $(document).change(function(){
+    var $cuttingOption = $('#infiniteoptions-container');
+    $cuttingOption.show();
+  });
+</script>
+{%endcomment%}
+
+<!-- <script type="text/javascript">
+  $(document).ready(function(){
+    initCuttingOptions();
+    
+    $('#coCheckbox').change(initCuttingOptions);    
+    $('select[data-product-option="1"]').change(initCuttingOptions);
+    
+    function initCuttingOptions() {
+      var productOptionSize = $('select[data-product-option="1"]').val();            
+      if (productOptionSize === 'Full 600mm x 1200mm') {        
+        $('#full-sheet-warning').hide();
+        
+        if ($('#coCheckbox').prop('checked')) {
+          //convertToThemeDropdownBox();
+          $('#infiniteoptions-container').show();                	
+        } else {
+          $('#infiniteoptions-container').hide();                	
+        }
+      } else {
+        $('#infiniteoptions-container').hide();
+        
+        if ($('#coCheckbox').prop('checked')) {
+          $('#full-sheet-warning').show();
+        } else {
+          $('#full-sheet-warning').hide();
+        }
+      }
+    }
+    
+
+    function convertToThemeDropdownBox() {
+      $('#infiniteoptions-container select').attr('class', 'form-field-input form-field-select form-field-filled');
+
+      // label
+      $('#infiniteoptions-container label').attr('class', 'form-field-title').appendTo('#infiniteoptions-container .spb-select');
+
+      // icon
+      $('#infiniteoptions-container .spb-select').append('<svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="8" height="6" viewBox="0 0 8 6"><g fill="currentColor" fill-rule="evenodd"><polygon class="icon-chevron-down-left" points="4 5.371 7.668 1.606 6.665 .629 4 3.365"></polygon><polygon class="icon-chevron-down-right" points="4 3.365 1.335 .629 1.335 .629 .332 1.606 4 5.371"></polygon></g></svg>');
+
+      $('#infiniteoptions-container .spb-select').attr('class', 'form-field-select-wrapper');    
+
+      // listen for change
+      $('#infiniteoptions-container select[name="properties[Cutting option]"]').change(function() {
+        if ($(this).val() === 'Custom cuts') {
+          $('#custom-cut-warning').show(); 
+        } else {
+          $('#custom-cut-warning').hide();
+        }
+      })  
+    }  
+    
+  })
+</script> -->
+
+<br/>
+
+<!--div style="margin-bottom: 15px">
+  <input id="coCheckbox" type="checkbox" name="colorCheckbox" value="cutting-options">
+  <label for="coCheckbox">Add cutting & adhesive option</label>
+</div-->
+
+<div id="infiniteoptions-container"></div>
+
+<div id="full-sheet-warning" style="display:none; color:red">Please note, cutting option is only available for Full Sheet.</div>
+
+<div id="custom-cut-warning" style="margin-top: 15px; display:none; color: orange;">Please specify your custom cut sizes in the Cart</div>
