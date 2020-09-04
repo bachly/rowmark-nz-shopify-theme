@@ -47,9 +47,13 @@
     
     {{ "tailwind.css" | asset_url | stylesheet_tag }}
     {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+
+    <!-- Spide Banner Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.12/dist/css/splide.min.css" /> 
     
-    {% include 'bold-common' %}
-    
+    {% comment %}
+      {% include 'bold-common' %}
+    {% endcomment %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -94,11 +98,8 @@
     <script src="{{ 'custom.js' | asset_url }}"></script>
 
     {% include 'structured-data' %}
-    {% include 'scm-bannerslider' %}
-  
-<!-- spurit_uev-added -->
-{% render 'spurit_uev-theme-snippet' %}
-<!-- /spurit_uev-added -->
 
+    <!-- Spide Banner Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 </body>
 </html>

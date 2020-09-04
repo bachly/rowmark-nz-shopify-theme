@@ -1,0 +1,83 @@
+<div class="bg-gray-300 py-2 lg:py-8 mb-8">
+  <div id="banner-slider" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for block in section.blocks %}
+          <li class="splide__slide" {{ block.shopify_attributes }}>
+            {% if block.settings.url == blank %} 
+              <img src="{{ block.settings.banner | img_url: '1280x600' }}" alt={{ block.settings.alt }}>
+            {% else %}
+              <a href="{{ block.settings.url }}">
+                <img src="{{ block.settings.banner | img_url: '1280x600' }}" alt={{ block.settings.alt }}>
+              </a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Banner Slider",
+    "settings": [],
+    "max_blocks": 5,
+    "blocks": [
+      {
+        "type": "slider",
+        "name": "Slider",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "banner",
+            "label": "Banner"
+          },
+          {
+            "type": "text",
+            "id": "alt",
+            "label": "Alt text"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Url"
+          }
+        ]
+      }
+    ],
+    "presets": [
+    {
+      "name": "Banner Slider",
+      "category": "Image",
+      "blocks": [
+        {
+          "type": "slider"
+        },
+        {
+          "type": "slider"
+        },
+        {
+          "type": "slider"
+        }
+      ]
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+$(document).ready(function() {
+  console.log('Init banner slider');
+  new Splide('#banner-slider', {
+    type: 'loop',
+    fixedWidth: '70vw',
+    focus: 'center',
+    gap: '2rem',
+    autoplay: true
+  }).mount(); 
+})
+{% endjavascript %}
