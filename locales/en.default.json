@@ -52,7 +52,7 @@
   "header": {
     "account": {
       "title": "My Account",
-      "login": "Login for online ordering",
+      "login": "Login",
       "logout": "Logout"
     },
     "converter": {
@@ -226,7 +226,7 @@
       "success": "We've sent you an email with a link to update your password."
     },
     "register": {
-      "title": "Request account",
+      "title": "Apply for an Online Ordering Account",
       "submit": "Create",
       "returning_customer": "Returning customer?",
       "success": "We have sent you an email, please click the link included to verify your email address."

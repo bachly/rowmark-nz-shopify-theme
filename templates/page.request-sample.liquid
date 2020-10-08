@@ -2,9 +2,9 @@
   <section class="bg-gray-100">
     <div class="container mx-auto px-2 md:px-0 py-8">
       <div class="max-w-3xl mx-auto lg:pr-4 lg:mb-0">
-        <h1 class="mt-0 font-black text-5xl mb-4 text-center">{{ page.title }}</h1>
+        <h1 class="mt-0 font-black text-4xl mb-4 text-center">{{ page.title }}</h1>
         {% if page.content != blank %}
-        <div class="page-description text-2xl leading-normal text-center">
+        <div class="page-description text-xl leading-normal text-center">
           {{ page.content }}
         </div>
         {% endif %}
@@ -35,7 +35,7 @@
               <div class="w-full md:w-1/3 md:pr-4 text-lg"></div>
               <div class="w-full md:w-2/3 md:pl-4">
                 <button type="submit"
-                  class="bg-primary text-white text-xl font-bold py-4 px-12 rounded w-64 shadow-lg hover:opacity-75">
+                  class="bg-primary text-white text-xl font-bold py-4 px-12 rounded w-64 mx-auto block shadow-lg hover:opacity-75 disabled:opacity-50">
                   Submit
                 </button>
               </div>
@@ -53,6 +53,7 @@
     $("#sample-request-form").on("submit", function (event) {
       event.preventDefault();
 
+      // Convert serialised data into indexed array
       console.log("[Request Sample Pack] Serialised form data:", $(this).serializeArray());
       var unindexed_array = $(this).serializeArray();
       var indexed_array = {};
@@ -73,13 +74,20 @@
 
       console.log("[Request Sample Pack] Indexed array:", indexed_array);
 
+      // Disable all fields and button before submission
+      var submitButton = $(this).find('button[type=submit]').attr('disabled', true).css('cursor', 'wait');
+      var allInputFields = $(this).find('input').attr('disabled', true).css('cursor', 'wait');
+      var allTextareaFields = $(this).find('textarea').attr('disabled', true).css('cursor', 'wait');
+
+      // Submit
       $.post("/apps/rowmarknz-backend/form", {
         formSubmission: {
           formName: 'Sample requests',
           formContent: indexed_array
         }
       }).done(function (result) {
-        alert("[Request Sample Pack] Done submit:", result);
+        console.log("[Request Sample Pack] Done submit!", result);
+        window.location = '/pages/form-submission-thankyou';
       })
     });
   })
