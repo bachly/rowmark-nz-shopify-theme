@@ -20,10 +20,10 @@
           <form id="account-application-form">
             {% include 'lead-capture-fields' %}
             <div class="flex flex-row flex-wrap">
-              <div class="w-full md:w-1/3 md:pr-4 text-lg"></div>
-              <div class="w-full md:w-2/3 md:pl-4">
+              <div class="w-full lg:w-1/3 md:pr-4 text-lg"></div>
+              <div class="w-full lg:w-2/3 md:pl-4">
                 <button type="submit"
-                  class="bg-primary text-white text-xl font-bold py-4 px-12 rounded w-64 mx-auto block shadow-lg hover:opacity-75 disabled:opacity-50">
+                  class="bg-primary text-white text-xl font-bold py-4 px-12 rounded w-64 mx-auto lg:mx-0 block shadow-lg hover:opacity-75 disabled:opacity-50">
                   Submit
                 </button>
               </div>
@@ -33,6 +33,52 @@
       </div>
     </div>
   </section>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      console.log("[Register Page] Page is ready");
+      $("#account-application-form").on("submit", function (event) {
+        event.preventDefault();
+  
+        // Convert serialised data into indexed array
+        console.log("[Register Page] Serialised form data:", $(this).serializeArray());
+        var unindexed_array = $(this).serializeArray();
+        var indexed_array = {};
+  
+        $.map(unindexed_array, function (n, i) {
+          var label = n["name"];
+          var labelLast2 = label.slice(-2);
+          var value = n["value"];
+  
+          if (labelLast2 === '[]') {
+            var labelWithoutBrackets = label.slice(0, label.length - 2);
+            indexed_array[labelWithoutBrackets] = indexed_array[labelWithoutBrackets] || [];
+            indexed_array[labelWithoutBrackets].push(value);
+          } else {
+            indexed_array[label] = value;
+          }
+        });
+  
+        console.log("[Register Page] Indexed array:", indexed_array);
+  
+        // Disable all fields and button before submission
+        var submitButton = $(this).find('button[type=submit]').attr('disabled', true).css('cursor', 'wait');
+        var allInputFields = $(this).find('input').attr('disabled', true).css('cursor', 'wait');
+        var allTextareaFields = $(this).find('textarea').attr('disabled', true).css('cursor', 'wait');
+  
+        // Submit
+        $.post("/apps/rowmarknz-backend/form", {
+          formSubmission: {
+            formName: 'Account applications',
+            formContent: indexed_array
+          }
+        }).done(function (result) {
+          console.log("[Register Page] Done submit!", result);
+          window.location = '/pages/form-submission-thankyou';
+        })
+      });
+    })
+  </script>
 
   <!-- www.123formbuilder.com script begins here -->
   <!-- <script type="text/javascript" defer src="//www.123formbuilder.com/embed/2157190.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Register for online ordering">
