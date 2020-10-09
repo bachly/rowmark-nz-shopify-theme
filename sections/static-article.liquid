@@ -15,7 +15,7 @@
   {% assign has_share = true %}
 {% endif %}
 
-<section class="article--outer">
+<section class="py-12">
   {% if article.image %}
     {% assign image = article.image | img_url: '1800x', format: 'pjpg' %}
     <figure class="article-image" style="background-image: url('{{ image }}');">
@@ -53,11 +53,11 @@
         </aside>
       {% endif %}
 
-      <h1 class="article--title">
+      <h1 id="article-title" class="font-bold text-3xl text-blue-800 leading-snug">
         {{ article.title }}
       </h1>
 
-      <div class="article--content rte">
+      <div id="article-content" class="rte text-blue-800 text-lg leading-normal">
         {{ article.content }}
       </div>
 

@@ -68,7 +68,7 @@
   "blog": {
     "general": {
       "empty_blog": "Sorry, there are no published articles for this blog",
-      "read_more": "Read now",
+      "read_more": "More",
       "see_more": "See more"
     },
     "article": {

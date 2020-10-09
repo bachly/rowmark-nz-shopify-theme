@@ -1,13 +1,13 @@
 {
   "current": {
     "color_background": "#ffffff",
-    "color_headings": "#484848",
-    "color_text": "#4d4d4d",
+    "color_headings": "#00264c",
+    "color_text": "#00264c",
     "color_links": "#1471c7",
-    "color_button_background": "#58a34b",
+    "color_button_background": "#89c76a",
     "color_button_text": "#ffffff",
     "color_header_background": "#ffffff",
-    "color_header_text": "#484848",
+    "color_header_text": "#00264c",
     "color_footer_background": "#ffffff",
     "color_footer_text": "#686868",
     "font_body": "Google_Roboto_400,400i,700,700i",
@@ -22,15 +22,15 @@
     "product_grid_image_style": "cropped-medium",
     "product_grid_quick_look": false,
     "product_grid_quick_buy": true,
-    "social_facebook": "https:\/\/www.facebook.com\/RowmarkAustralia\/",
-    "social_twitter": "https:\/\/twitter.com\/RowmarkAU",
+    "social_facebook": "https:\/\/www.facebook.com",
+    "social_twitter": "",
     "social_google": "",
-    "social_pinterest": "https:\/\/au.pinterest.com\/rowmarkaus\/",
-    "social_instagram": "https:\/\/www.instagram.com\/rowmarkau\/",
+    "social_pinterest": "",
+    "social_instagram": "https:\/\/www.instagram.com",
     "social_tumblr": "",
     "social_vimeo": "",
     "social_youtube": "",
-    "social_email": "sales@rowmark.com.au",
+    "social_email": "",
     "favicon": "",
     "enable_currency_converter": false,
     "currency_display_format": "money_format",
@@ -73,11 +73,11 @@
             "type": "promotion",
             "settings": {
               "image": "",
-              "title": "Sample Pack",
+              "title": "ColorShop Woods",
               "text": "",
               "color": "#ffffff",
               "block_link": "shopify:\/\/pages\/order-sample-pack",
-              "button_text": "Order FREE",
+              "button_text": "Order",
               "button_style": "primary"
             }
           },
@@ -85,22 +85,35 @@
             "type": "promotion",
             "settings": {
               "image": "",
-              "title": "Contact us",
+              "title": "Saddle Collection",
               "text": "Need help in selecting the best product for your project? Talk to us today.",
               "color": "#ffffff",
               "block_link": "shopify:\/\/pages\/contact-us",
               "button_text": "Contact",
               "button_style": "primary"
             }
+          },
+          "1598921086405": {
+            "type": "promotion",
+            "settings": {
+              "image": "",
+              "title": "The Naturals",
+              "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+              "color": "#4d4d4d",
+              "block_link": "",
+              "button_text": "",
+              "button_style": "primary"
+            }
           }
         },
         "block_order": [
           "home-promo-mosaic-4",
-          "1508724380943"
+          "1508724380943",
+          "1598921086405"
         ],
         "settings": {
           "title": "",
-          "section_height": "medium"
+          "section_height": "small"
         }
       },
       "home-blog-posts": {
@@ -150,12 +163,12 @@
         ],
         "settings": {
           "sticky_header": true,
-          "logo": "",
+          "logo": "shopify:\/\/shop_images\/rowmark-nz_logo-white.png",
           "enable_live_search": true,
           "enable_live_search_images": true,
           "enable_live_search_articles_pages": false,
           "quick_links": "",
-          "menu": "",
+          "menu": "top-navigation",
           "meganav_trigger": "products"
         }
       },
@@ -164,18 +177,33 @@
         "blocks": {
           "1516620569247": {
             "type": "social_accounts",
-            "settings": {}
+            "settings": {
+            }
           },
           "1598863128826": {
             "type": "menu",
             "settings": {
               "menu": "main-menu"
             }
+          },
+          "1598866826868": {
+            "type": "menu",
+            "settings": {
+              "menu": "footer-resources"
+            }
+          },
+          "1598867160972": {
+            "type": "menu",
+            "settings": {
+              "menu": "about"
+            }
           }
         },
         "block_order": [
           "1516620569247",
-          "1598863128826"
+          "1598863128826",
+          "1598866826868",
+          "1598867160972"
         ],
         "settings": {
           "payment_icons": true,
@@ -242,13 +270,14 @@
       },
       "static-list-collections": {
         "type": "static-list-collections",
-        "settings": {}
+        "settings": {
+        }
       },
       "static-blog": {
         "type": "static-blog",
         "settings": {
-          "show_rss_link": true,
-          "show_date": true,
+          "show_rss_link": false,
+          "show_date": false,
           "show_author": false,
           "show_excerpt": true,
           "featured_post": "",
@@ -273,7 +302,7 @@
             "type": "promotion",
             "settings": {
               "image": "",
-              "title": "Rowmark Australia",
+              "title": "Laser Max",
               "text": "Official distributor of Laser, Rotary Engraving, UV Printable materials for all applications.",
               "color": "#ffffff",
               "block_link": "shopify:\/\/collections\/all",
@@ -285,22 +314,35 @@
             "type": "promotion",
             "settings": {
               "image": "",
-              "title": "Rowmark Australia Color Chart",
+              "title": "Laser Max Trilayer",
               "text": "",
               "color": "#ffffff",
               "block_link": "https:\/\/drive.google.com\/open?id=1TY-SyLvQtUAfF2Yb4BHvfi1g1h5aDCLU",
               "button_text": "Click here",
               "button_style": "secondary"
             }
+          },
+          "1598920893935": {
+            "type": "promotion",
+            "settings": {
+              "image": "",
+              "title": "Laser Max Metallics",
+              "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+              "color": "#4d4d4d",
+              "block_link": "",
+              "button_text": "",
+              "button_style": "primary"
+            }
           }
         },
         "block_order": [
           "1516618966163-0",
-          "1521156846300"
+          "1521156846300",
+          "1598920893935"
         ],
         "settings": {
           "title": "",
-          "section_height": "medium"
+          "section_height": "small"
         }
       },
       "1516619100836": {
@@ -309,12 +351,12 @@
           "1516619100836-0": {
             "type": "promotion",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/RowmarkNZ-Banner-SamplePack.jpg",
               "title": "Sample Pack",
               "text": "2000 benchmark products, 568 colours, 28 product lines, 5 popular finishes.",
               "color": "#ffffff",
               "block_link": "shopify:\/\/pages\/order-sample-pack",
-              "button_text": "Request Your Complimentary Sample Pack",
+              "button_text": "Request A Sample Pack",
               "button_style": "secondary",
               "promo_width": "half-width"
             }
@@ -322,8 +364,8 @@
           "1516619100836-1": {
             "type": "promotion",
             "settings": {
-              "image": "",
-              "title": "Contact Us",
+              "image": "shopify:\/\/shop_images\/RowmarkNZ-Banner-NeedHelp.jpg",
+              "title": "Need help?",
               "text": "Need help in selecting the best product for your project? Talk to us today.",
               "color": "#ffffff",
               "block_link": "shopify:\/\/pages\/contact-us",
@@ -400,7 +442,7 @@
           "1525838249735-2": {
             "type": "promotion",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/RowmarkNZ-Banner-ProductCatalogue.jpg",
               "title": "Product Catalog",
               "text": "Find Laser, Rotary Engraving & UV Printable materials, sublimation metals and engravabale gifts",
               "color": "#ffffff",
@@ -413,12 +455,12 @@
           "1525838249735-3": {
             "type": "promotion",
             "settings": {
-              "image": "",
-              "title": "Colour Chart",
-              "text": "View and download all-in-one Colour Chart",
+              "image": "shopify:\/\/shop_images\/RowmarkNZ-Banner-Resources.jpg",
+              "title": "Resources",
+              "text": "View and download resources that you can use in your next project",
               "color": "#ffffff",
-              "block_link": "https:\/\/rowmark.com.au\/pages\/color-chart",
-              "button_text": "View Colour Chart",
+              "block_link": "https:\/\/rowmarknz.myshopify.com\/blogs\/resources",
+              "button_text": "View Resources",
               "button_style": "secondary",
               "promo_width": "half-width"
             }
@@ -436,8 +478,8 @@
       "static-article": {
         "type": "static-article",
         "settings": {
-          "show_date": true,
-          "show_author": true,
+          "show_date": false,
+          "show_author": false,
           "use_share_buttons": true
         }
       },
@@ -463,20 +505,76 @@
           "1591078072724",
           "1591078094913"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "static-404": {
         "type": "static-404",
         "settings": {
           "continue_url": "shopify:\/\/collections\/all"
         }
+      },
+      "1599190925641": {
+        "type": "dynamic-banner-slider",
+        "blocks": {
+          "1599191337821": {
+            "type": "slider",
+            "settings": {
+              "banner": "shopify:\/\/shop_images\/RowmarkAustralia_TriLayer_HeroBanner.jpg",
+              "alt": "",
+              "url": ""
+            }
+          },
+          "1599190925641-0": {
+            "type": "slider",
+            "settings": {
+              "banner": "shopify:\/\/shop_images\/RowmarkAustralia_COVIDWebBanner.jpg",
+              "alt": "",
+              "url": ""
+            }
+          },
+          "1599190925641-2": {
+            "type": "slider",
+            "settings": {
+              "banner": "shopify:\/\/shop_images\/RowmarkAustralia_PromotionAug2020SaddleCollection_HeroBanner.jpg",
+              "alt": "",
+              "url": ""
+            }
+          },
+          "1599190925641-1": {
+            "type": "slider",
+            "settings": {
+              "banner": "shopify:\/\/shop_images\/RowmarkAustralia-Sept2020-PromotionHero.jpg",
+              "alt": "",
+              "url": ""
+            }
+          },
+          "1599191210563": {
+            "type": "slider",
+            "settings": {
+              "banner": "shopify:\/\/shop_images\/RowmarkAustralia-July2020-PromotionHero.jpg",
+              "alt": "",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "1599191337821",
+          "1599190925641-0",
+          "1599190925641-2",
+          "1599190925641-1",
+          "1599191210563"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
-      "1525838249735",
-      "1516619100836",
+      "1599190925641",
       "1516618966163",
       "home-promo-mosaic",
+      "1525838249735",
+      "1516619100836",
       "1501312562998",
       "home-blog-posts",
       "1516620454948"
@@ -502,15 +600,18 @@
           "blocks": {
             "promo-mosaic-block-1": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "promo-mosaic-block-2": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "promo-mosaic-block-3": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -518,38 +619,46 @@
             "promo-mosaic-block-2",
             "promo-mosaic-block-3"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "home-blog-posts": {
           "type": "dynamic-blog-posts",
-          "settings": {}
+          "settings": {
+          }
         },
         "home-twitter-feed": {
           "type": "dynamic-twitter-feed",
-          "settings": {}
+          "settings": {
+          }
         },
         "home-featured-collection-1": {
           "type": "dynamic-featured-collection",
-          "settings": {}
+          "settings": {
+          }
         },
         "home-promo-grid": {
           "type": "dynamic-promo-grid",
           "blocks": {
             "promo-grid-block-1": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "promo-grid-block-2": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "promo-grid-block-3": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "promo-grid-block-4": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -558,7 +667,8 @@
             "promo-grid-block-3",
             "promo-grid-block-4"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "home-featured-collection-2": {
           "type": "dynamic-featured-collection",
@@ -602,19 +712,23 @@
           "blocks": {
             "home-promo-mosaic-1": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-promo-mosaic-2": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-promo-mosaic-3": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-promo-mosaic-4": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -623,7 +737,8 @@
             "home-promo-mosaic-3",
             "home-promo-mosaic-4"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "home-promo-grid": {
           "type": "dynamic-promo-grid",
@@ -636,11 +751,13 @@
             },
             "home-promo-grid-2": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-promo-grid-3": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -648,26 +765,31 @@
             "home-promo-grid-2",
             "home-promo-grid-3"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "home-featured-collection-1": {
           "type": "dynamic-featured-collection",
-          "settings": {}
+          "settings": {
+          }
         },
         "home-menu-list": {
           "type": "dynamic-menu-list",
           "blocks": {
             "home-menu-list-1": {
               "type": "menu",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-menu-list-2": {
               "type": "menu",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-menu-list-3": {
               "type": "menu",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -681,15 +803,18 @@
         },
         "home-blog-posts": {
           "type": "dynamic-blog-posts",
-          "settings": {}
+          "settings": {
+          }
         },
         "home-twitter-feed": {
           "type": "dynamic-twitter-feed",
-          "settings": {}
+          "settings": {
+          }
         },
         "home-instagram-feed": {
           "type": "dynamic-instagram-feed",
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "content_for_index": [
@@ -718,7 +843,8 @@
       "sections": {
         "static-header": {
           "type": "static-header",
-          "settings": {}
+          "settings": {
+          }
         },
         "static-footer": {
           "type": "static-footer",
@@ -731,7 +857,8 @@
             },
             "static-footer-3": {
               "type": "newsletter",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -771,23 +898,28 @@
           "blocks": {
             "home-promo-mosaic-1": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-promo-mosaic-2": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-promo-mosaic-3": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-promo-mosaic-4": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-promo-mosaic-5": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -803,48 +935,57 @@
         },
         "home-featured-collection": {
           "type": "dynamic-featured-collection",
-          "settings": {}
+          "settings": {
+          }
         },
         "home-promo-grid": {
           "type": "dynamic-promo-grid",
           "blocks": {
             "home-promo-grid-1": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-promo-grid-2": {
               "type": "promotion",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
             "home-promo-grid-1",
             "home-promo-grid-2"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "home-blog-posts": {
           "type": "dynamic-blog-posts",
-          "settings": {}
+          "settings": {
+          }
         },
         "home-collection-list": {
           "type": "dynamic-collection-list",
           "blocks": {
             "home-collection-list-1": {
               "type": "collection",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-collection-list-2": {
               "type": "collection",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-collection-list-3": {
               "type": "collection",
-              "settings": {}
+              "settings": {
+              }
             },
             "home-collection-list-4": {
               "type": "collection",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -853,7 +994,8 @@
             "home-collection-list-3",
             "home-collection-list-4"
           ],
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "content_for_index": [

@@ -13,7 +13,7 @@
 
 <section class="menulist--container">
   {% if section.settings.title != blank %}
-    <h1 class="home-section--title">
+    <h1 class="my-12 text-3xl font-bold text-center text-blue-800">
       {{ section.settings.title | escape }}
     </h1>
   {% endif %}
@@ -48,7 +48,7 @@
           {% endfor %}
         {% endif %}
 
-        <article class="menulist--item menulist--item-{{ forloop.index }}" {{ block.shopify_attributes }}>
+        <article class="menulist--item menulist--item-{{ forloop.index }} text-xl" {{ block.shopify_attributes }}>
           <div class="menulist--item--inner">
             <div class="menulist--image">
               {% if image %}
@@ -64,7 +64,7 @@
             </div>
 
             <div class="menulist--content">
-              <h2 class="menulist--title" data-accordion-trigger>
+              <h2 class="menulist--title leading-snug font-bold" data-accordion-trigger>
                 {% if onboard %}
                   {{ 'onboarding.menu_list.title' | t }}
                 {% else %}

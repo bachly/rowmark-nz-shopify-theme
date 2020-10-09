@@ -1,127 +1,110 @@
-<article class="site-page" data-template-page data-template-contact>
+<article class="text-blue-800" data-template-page data-template-contact>
 
-  <header class="page-masthead">
-    <h1 class="page-title">
-      {{ page.title }}
-    </h1>
-  </header>
-  {% form 'contact' %}
-
-    {% if page.content != blank %}
-      <div class="page-content rte">
-        {{ page.content }}
-      </div>
-    {% endif %}
-
-    <div class="contact-page-content">
-      {% assign has_message = false %}
-
-      {% if form.errors != blank %}
-        {% assign has_message = true %}
-        {% assign message_type = 'error' %}
-      {% endif %}
-
-      {% if form.posted_successfully? %}
-        {% assign has_message = true %}
-        {% assign message_type = 'success' %}
-      {% endif %}
-
-      {% if has_message %}
-        <div class="contact-message message--{{ message_type }}">
-          {% case message_type %}
-            {% when 'success' %}
-              <p>
-                {{ 'contact.form.post_success' | t }}
-              </p>
-            {% when 'error' %}
-              {{ form.errors | default_errors }}
-          {% endcase %}
+  <section class="bg-gray-100">
+    <div class="container mx-auto px-2 md:px-0 py-8">
+      <div class="max-w-3xl mx-auto lg:pr-4 lg:mb-0">
+        <h1 class="mt-0 font-black text-4xl mb-4 text-center">{{ page.title }}</h1>
+        {% if page.content != blank %}
+        <div class="page-description text-xl leading-normal text-center">
+          {{ page.content }}
         </div>
-      {% endif %}
-
-      <div class="form-fields-columns">
-        <div class="form-field form-field--half">
-          {% assign value = '' %}
-          {%- if form.name -%}
-            {% assign value = form.name %}
-          {%- elsif customer -%}
-            {% assign value = customer.name %}
-          {%- endif -%}
-
-          <input
-            class="form-field-input form-field-text {% if form.errors contains 'name' %}form-field-error{% endif %}"
-            id="contact_name"
-            name="contact[name]"
-            type="text"
-            value="{{ value }}">
-
-          <label class="form-field-title" for="contact_name">
-            {{ 'contact.form.name' | t }}
-          </label>
-        </div>
-
-        <div class="form-field form-field--half">
-          {% assign value = '' %}
-          {%- if form.email -%}
-            {% assign value = form.email %}
-          {%- elsif customer -%}
-            {% assign value = customer.email %}
-          {%- endif -%}
-          <input
-            class="form-field-input form-field-text {% if form.errors contains 'email' %}form-field-error{% endif %}"
-            id="contact_email"
-            name="contact[email]"
-            type="text"
-            value="{{ value }}"
-            autocorrect="off"
-            autocapitalize="off">
-
-          <label class="form-field-title" for="contact_email">
-            {{ 'contact.form.email' | t }}
-          </label>
-        </div>
-      </div>
-
-      <div class="form-field">
-        {% assign value = '' %}
-        {%- if form.phone -%}
-          {% assign value = form.phone %}
-        {%- elsif customer -%}
-          {% assign value = customer.phone %}
-        {%- endif -%}
-
-        <input
-          class="form-field-input form-field-text {% if form.errors contains 'phone' %}form-field-error{% endif %}"
-          id="contact_phone"
-          name="contact[phone]"
-          type="tel"
-          value="{{ value }}">
-
-        <label class="form-field-title" for="contact_phone">
-          {{ 'contact.form.phone' | t }}
-        </label>
-      </div>
-
-      <div class="form-field">
-        {% assign value = '' %}
-        {%- if form.body -%}
-          {% assign value = form.body %}
-        {%- endif -%}
-        <textarea
-          class="form-field-input form-field-textarea {% if form.errors contains 'body' %}form-field-error{% endif %}"
-          id="contact_message"
-          name="contact[message]">{{ value }}</textarea>
-
-        <label class="form-field-title" for="contact_body">
-          {{ 'contact.form.message' | t }}
-        </label>
-      </div>
-
-      <div class="form-action-row">
-        <button class="button-primary contact-form-button" type="submit">
-          {{ 'contact.form.send' | t }}
-        </button>
+        {% endif %}
       </div>
     </div>
+  </section>
+
+  {% form 'contact' %}
+
+  <div class="contact-page-content">
+    {% assign has_message = false %}
+
+    {% if form.errors != blank %}
+    {% assign has_message = true %}
+    {% assign message_type = 'error' %}
+    {% endif %}
+
+    {% if form.posted_successfully? %}
+    {% assign has_message = true %}
+    {% assign message_type = 'success' %}
+    {% endif %}
+
+    {% if has_message %}
+    <div class="contact-message message--{{ message_type }}">
+      {% case message_type %}
+      {% when 'success' %}
+      <p>
+        {{ 'contact.form.post_success' | t }}
+      </p>
+      {% when 'error' %}
+      {{ form.errors | default_errors }}
+      {% endcase %}
+    </div>
+    {% endif %}
+
+    <div class="form-fields-columns">
+      <div class="form-field form-field--half">
+        {% assign value = '' %}
+        {%- if form.name -%}
+        {% assign value = form.name %}
+        {%- elsif customer -%}
+        {% assign value = customer.name %}
+        {%- endif -%}
+        <label class="sr-only" for="contact_name">
+          {{ 'contact.form.name' | t }}
+        </label>
+        <input class="py-4 px-5 text-lg border-gray-400 rounded w-full mb-2 {% if form.errors contains 'name' %}border-2 border-red-400 text-red-400{% else %}border border-gray-400{% endif %}"
+          id="contact_name" name="contact[name]" type="text" placeholder="{{ 'contact.form.name' | t }}" value="{{ value }}">
+      </div>
+
+      <div class="form-field form-field--half">
+        {% assign value = '' %}
+        {%- if form.email -%}
+        {% assign value = form.email %}
+        {%- elsif customer -%}
+        {% assign value = customer.email %}
+        {%- endif -%}
+        <label class="sr-only" for="contact_email">
+          {{ 'contact.form.email' | t }}
+        </label>
+        <input class="py-4 px-5 text-lg border-gray-400 rounded w-full mb-2 {% if form.errors contains 'email' %}border-2 border-red-400 text-red-400{% else %}border border-gray-400{% endif %}"
+          id="contact_email" name="contact[email]" type="text" value="{{ value }}" placeholder="{{ 'contact.form.email' | t }}" autocorrect="off"
+          autocapitalize="off">
+      </div>
+    </div>
+
+    <div class="form-field">
+      {% assign value = '' %}
+      {%- if form.phone -%}
+      {% assign value = form.phone %}
+      {%- elsif customer -%}
+      {% assign value = customer.phone %}
+      {%- endif -%}
+      <label class="sr-only" for="contact_phone">
+        {{ 'contact.form.phone' | t }}
+      </label>
+      <input class="py-4 px-5 text-lg border-gray-400 rounded w-full mb-2 {% if form.errors contains 'phone' %}border-2 border-red-400 text-red-400{% else %}border border-gray-400{% endif %}"
+        id="contact_phone" name="contact[phone]" type="tel" placeholder="{{ 'contact.form.phone' | t }}" value="{{ value }}">
+    </div>
+
+    <div class="form-field">
+      {% assign value = '' %}
+      {%- if form.body -%}
+      {% assign value = form.body %}
+      {%- endif -%}
+      <label class="sr-only" for="contact_body">
+        {{ 'contact.form.message' | t }}
+      </label>
+      <textarea
+        placeholder="{{ 'contact.form.message' | t }}"
+        class="w-full py-4 px-5 border-gray-400 rounded h-24 text-lg h-64 {% if form.errors contains 'body' %}border-2 border-red-400 text-red-400{% else %}border border-gray-400{% endif %}"
+        id="contact_message" name="contact[message]">{{ value }}</textarea>
+    </div>
+
+    <div class="form-action-row">
+      <button class="bg-primary text-white text-xl font-bold py-4 px-12 rounded w-64 mx-auto block shadow-lg hover:opacity-75 disabled:opacity-50" type="submit">
+        {{ 'contact.form.send' | t }}
+      </button>
+    </div>
+  </div>
   {% endform %}
 </article>

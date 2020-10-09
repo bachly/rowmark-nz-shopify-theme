@@ -15,7 +15,7 @@
   {% endunless %}
 {%- endcapture -%}
 
-<article class="{{ excerpt_class | strip_newlines }}">
+<article class="w-full md:w-1/3 md:pr-4"> <!-- {{ excerpt_class | strip_newlines }} -->
 
   {% unless onboarding %}
     {% if article.image %}
@@ -28,7 +28,7 @@
       </a>
     {% endif %}
 
-    <div class="article--excerpt-content">
+    <div class="article--excerpt-content px-2 py-2 border border-gray-100 shadow">
       {% if section.settings.show_date or section.settings.show_author %}
         <aside class="article--excerpt-meta">
           {% if section.settings.show_date %}
@@ -45,14 +45,14 @@
         </aside>
       {% endif %}
 
-      <h2 class="article--excerpt-title">
+      <h2 class="font-bold text-xl text-blue-800 leading-snug mb-2">
         <a href="{{ article.url }}">
           {{ article.title }}
         </a>
       </h2>
 
       {%- if section.settings.show_excerpt -%}
-        <div class="article--excerpt-text rte">
+        <div class="text-lg text-blue-800 leading-normal mb-2">
           {%- if article.excerpt == blank -%}
             <p>{{ article.content | strip_html | truncatewords: 40 }}</p>
           {%- else -%}
@@ -86,7 +86,7 @@
       style="background-image: url('{{ background_image | strip_newlines }}');">
     </a>
 
-    <div class="article--excerpt-content">
+    <div class="article--excerpt-content px-2 py-2 border border-gray-100 shadow">
       {% if section.settings.show_date or section.settings.show_author %}
         <aside class="article--excerpt-meta">
           {% if section.settings.show_date %}
