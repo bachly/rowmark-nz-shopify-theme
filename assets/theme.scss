@@ -616,6 +616,7 @@ $font-body-size: 14px;
 $font-body-size-small: rem($font-body-size - 1px);
 $font-body-size-smaller: rem($font-body-size - 2px);
 $font-body-size-large: $font-body-size * 1.25;
+$font-body-size-larger: $font-body-size * 1.5;
 
 $font-heading-large: rem(32px);
 $font-heading-medium: rem(28px);
@@ -9081,11 +9082,14 @@ $local-image-width: rem(100px);
 
 .atc-subtotal--label {
   opacity: 0.6;
+  font-size: $font-body-size;
 }
 
 .atc-subtotal--price {
-  display: inline-block;
-  margin-left: $space-xx-small;
+  display: block;
+  font-size: $font-body-size-larger;
+  font-weight: bold;
+  /*margin-left: $space-xx-small;*/
   color: $color-heading;
 }
 
@@ -9100,7 +9104,7 @@ $local-image-width: rem(100px);
 }
 
 .atc-button--checkout {
-  margin-left: $space-xx-small;
+  /*margin-left: $space-xx-small;*/
 }
 
 // Close button

@@ -1,9 +1,11 @@
-{% assign customerAllowedToSeePriceAndPlaceOrder = false %} 
-{% if customer and customer.tags contains "Account Customer" %}
-  {% assign customerAllowedToSeePriceAndPlaceOrder = true %}
+{% assign customerForbidToSeePriceAndPlaceOrder = false %} 
+{% if customer and customer.tags contains "Forbid To See Price" %}
+  {% assign customerForbidToSeePriceAndPlaceOrder = true %}
 {% endif %}
 
-{% if customerAllowedToSeePriceAndPlaceOrder %}
+{% if customerForbidToSeePriceAndPlaceOrder %}
+    <!-- Customer is tagged as "Forbid To See Price" and cannot see these information -->
+{% else %}
 <div class="product-addons-cutting-adhesive">
     <div class="column__half"> 
             <h3><u>Quantity discounts</u></h3>

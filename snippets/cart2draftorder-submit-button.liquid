@@ -36,7 +36,8 @@
           note: cartNote,
         };
 
-        console.log("[Cart2DraftOrder] Submit:", data);
+        console.log("[Cart2DraftOrder] Submit url:", CART_SUBMIT_URL);
+        console.log("[Cart2DraftOrder] Submit data:", data);
         $.post(CART_SUBMIT_URL, data, function (result2) {
           console.log("[Cart2DraftOrder] Submission result:", result2);
 

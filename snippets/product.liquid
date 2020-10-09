@@ -6,9 +6,9 @@
     Is the snippet being loaded in a QuickShop
 {% endcomment %}
 
-{% assign customerAllowedToSeePriceAndPlaceOrder = false %}
-{% if customer and customer.tags contains "Account Customer" %}
-  {% assign customerAllowedToSeePriceAndPlaceOrder = true %}
+{% assign customerForbidToSeePriceAndPlaceOrder = false %}
+{% if customer and customer.tags contains "Forbid To See Price" %}
+  {% assign customerForbidToSeePriceAndPlaceOrder = true %}
 {% endif %}
 
 {% assign enable_social_sharing = settings.product_social_sharing %}
@@ -80,29 +80,31 @@
         </div>
       {% endif %}
 
-      {% if customerAllowedToSeePriceAndPlaceOrder %}
-      <div class="product-pricing">
-        {%
-          include 'product-badge',
-          class_root: 'product',
-          product_available: product_available,
-          on_sale: on_sale,
-          price: price,
-          compare_at_price: compare_at_price
-        %}
+      {% if customerForbidToSeePriceAndPlaceOrder %}
+        <!-- Customer is tagged as "Forbid To See Price" and cannot see these information -->
+      {% else %}
+        <div class="product-pricing">
+          {%
+            include 'product-badge',
+            class_root: 'product',
+            product_available: product_available,
+            on_sale: on_sale,
+            price: price,
+            compare_at_price: compare_at_price
+          %}
 
-        {%
-          include 'product-price',
-          class_root: 'product',
-          price: price,
-          price_varies: false,
-          compare_at_price: compare_at_price,
-          compare_at_price_varies: false,
-          on_sale: on_sale,
-          emphasize_price: false
-        %}
-      </div>
-      {% include 'point-of-invoice-notice' %}
+          {%
+            include 'product-price',
+            class_root: 'product',
+            price: price,
+            price_varies: false,
+            compare_at_price: compare_at_price,
+            compare_at_price_varies: false,
+            on_sale: on_sale,
+            emphasize_price: false
+          %}
+        </div>
+        {% include 'point-of-invoice-notice' %}
       {% endif %}
     </div>
     

@@ -9,9 +9,9 @@
 {% assign money_format = shop.money_format | strip_html %}
 {% assign show_modal = enable_quick_look %}
 
-{% assign customerAllowedToSeePriceAndPlaceOrder = false %}
-{% if customer and customer.tags contains "Account Customer" %}
-  {% assign customerAllowedToSeePriceAndPlaceOrder = true %}
+{% assign customerForbidToSeePriceAndPlaceOrder = false %}
+{% if customer and customer.tags contains "Forbid To See Price" %}
+  {% assign customerForbidToSeePriceAndPlaceOrder = true %}
 {% endif %}
 
 {% if product %}
@@ -98,10 +98,12 @@
     {% endcomment %}
 
     <div class="productitem--info">
-      {% if customerAllowedToSeePriceAndPlaceOrder %}
-      {% if emphasize_price %}
-        {{ product_item_price }}
-      {% endif %}
+      {% if customerForbidToSeePriceAndPlaceOrder %}
+         <!-- Customer is tagged as "Forbid To See Price" and cannot see these information -->
+      {% else %}
+        {% if emphasize_price %}
+          {{ product_item_price }}
+        {% endif %}
       {% endif %}
 
       <h2 class="productitem--title">
@@ -110,12 +112,13 @@
         </a>
       </h2>
 
-      {% if customerAllowedToSeePriceAndPlaceOrder %}
-      {% unless emphasize_price %}
-        {{ product_item_price }}
-      {% endunless %}
+      {% if customerForbidToSeePriceAndPlaceOrder %}
+         <!-- Customer is tagged as "Forbid To See Price" and cannot see these information -->
+      {% else %}
+        {% unless emphasize_price %}
+          {{ product_item_price }}
+        {% endunless %}
       {% endif %}
-
 
       {% if settings.product_ratings_reviews %}
         <div class="productitem--ratings">
