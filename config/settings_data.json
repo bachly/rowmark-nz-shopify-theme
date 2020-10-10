@@ -22,11 +22,11 @@
     "product_grid_image_style": "cropped-medium",
     "product_grid_quick_look": false,
     "product_grid_quick_buy": true,
-    "social_facebook": "https:\/\/www.facebook.com",
+    "social_facebook": "",
     "social_twitter": "",
     "social_google": "",
     "social_pinterest": "",
-    "social_instagram": "https:\/\/www.instagram.com",
+    "social_instagram": "",
     "social_tumblr": "",
     "social_vimeo": "",
     "social_youtube": "",
@@ -121,7 +121,7 @@
         "disabled": true,
         "settings": {
           "title": "News",
-          "blog": "news",
+          "blog": "",
           "show_date": true,
           "show_author": false,
           "show_excerpt": true
@@ -175,11 +175,6 @@
       "static-footer": {
         "type": "static-footer",
         "blocks": {
-          "1516620569247": {
-            "type": "social_accounts",
-            "settings": {
-            }
-          },
           "1598863128826": {
             "type": "menu",
             "settings": {
@@ -197,13 +192,20 @@
             "settings": {
               "menu": "about"
             }
+          },
+          "1602311734932": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Subscribe",
+              "text": "<p>Stay update to promotions and new products.<\/p>"
+            }
           }
         },
         "block_order": [
-          "1516620569247",
           "1598863128826",
           "1598866826868",
-          "1598867160972"
+          "1598867160972",
+          "1602311734932"
         ],
         "settings": {
           "payment_icons": true,
@@ -355,8 +357,8 @@
               "title": "Sample Pack",
               "text": "2000 benchmark products, 568 colours, 28 product lines, 5 popular finishes.",
               "color": "#ffffff",
-              "block_link": "shopify:\/\/pages\/order-sample-pack",
-              "button_text": "Request A Sample Pack",
+              "block_link": "shopify:\/\/pages\/request-sample-pack",
+              "button_text": "Request Sample Pack",
               "button_style": "secondary",
               "promo_width": "half-width"
             }
@@ -400,36 +402,36 @@
           "1518256632211": {
             "type": "menu",
             "settings": {
-              "menu": "",
-              "image": ""
-            }
-          },
-          "1518256641864": {
-            "type": "menu",
-            "settings": {
-              "menu": "",
+              "menu": "laser-rotary-engraving-collections",
               "image": ""
             }
           },
           "1518256651381": {
             "type": "menu",
             "settings": {
-              "menu": "",
+              "menu": "laser-rotary-engraving-collections-cont",
+              "image": ""
+            }
+          },
+          "1518256641864": {
+            "type": "menu",
+            "settings": {
+              "menu": "rotary-engraving-collections",
               "image": ""
             }
           },
           "1518256670368": {
             "type": "menu",
             "settings": {
-              "menu": "",
+              "menu": "engraving-accessories-collections",
               "image": ""
             }
           }
         },
         "block_order": [
           "1518256632211",
-          "1518256641864",
           "1518256651381",
+          "1518256641864",
           "1518256670368"
         ],
         "settings": {
@@ -520,15 +522,15 @@
           "1599191337821": {
             "type": "slider",
             "settings": {
-              "banner": "shopify:\/\/shop_images\/RowmarkAustralia_TriLayer_HeroBanner.jpg",
+              "banner": "shopify:\/\/shop_images\/RowmarkNZ_TriLayer_HeroBanner.jpg",
               "alt": "",
-              "url": ""
+              "url": "shopify:\/\/collections\/lasermax-trilayer"
             }
           },
           "1599190925641-0": {
             "type": "slider",
             "settings": {
-              "banner": "shopify:\/\/shop_images\/RowmarkAustralia_COVIDWebBanner.jpg",
+              "banner": "shopify:\/\/shop_images\/RowmarkNZ_COVIDSignage_HeroBanner.jpg",
               "alt": "",
               "url": ""
             }
@@ -536,25 +538,25 @@
           "1599190925641-2": {
             "type": "slider",
             "settings": {
-              "banner": "shopify:\/\/shop_images\/RowmarkAustralia_PromotionAug2020SaddleCollection_HeroBanner.jpg",
+              "banner": "shopify:\/\/shop_images\/RowmarkNZ_SaddleCollection_HeroBanner.jpg",
               "alt": "",
-              "url": ""
-            }
-          },
-          "1599190925641-1": {
-            "type": "slider",
-            "settings": {
-              "banner": "shopify:\/\/shop_images\/RowmarkAustralia-Sept2020-PromotionHero.jpg",
-              "alt": "",
-              "url": ""
+              "url": "shopify:\/\/collections\/saddle-collection"
             }
           },
           "1599191210563": {
             "type": "slider",
             "settings": {
-              "banner": "shopify:\/\/shop_images\/RowmarkAustralia-July2020-PromotionHero.jpg",
+              "banner": "shopify:\/\/shop_images\/RowmarkNZ_DiamondCutters_HeroBanner.jpg",
               "alt": "",
-              "url": ""
+              "url": "shopify:\/\/products\/antares-standard-cutter"
+            }
+          },
+          "1599190925641-1": {
+            "type": "slider",
+            "settings": {
+              "banner": "shopify:\/\/shop_images\/RowmarkNZ-ADAAlternative-HeroBanner.jpg",
+              "alt": "",
+              "url": "shopify:\/\/collections\/ada-atlternative"
             }
           }
         },
@@ -562,8 +564,8 @@
           "1599191337821",
           "1599190925641-0",
           "1599190925641-2",
-          "1599190925641-1",
-          "1599191210563"
+          "1599191210563",
+          "1599190925641-1"
         ],
         "settings": {
         }
