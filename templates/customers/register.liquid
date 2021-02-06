@@ -1,5 +1,5 @@
 <div class="text-blue-800" data-template-account>
-  <section class="bg-gray-100">
+  <section class="">
     <div class="container mx-auto px-2 md:px-0 py-8">
       <div class="max-w-3xl mx-auto lg:pr-4 lg:mb-0">
         <h1 id="register-page-title" class="mt-0 font-black text-4xl mb-4 text-center">
@@ -13,22 +13,68 @@
     </div>
   </section>
 
-  <section class="py-6 md:py-12">
-    <div class="container mx-auto px-2 md:px-0">
-      <div class="max-w-4xl mx-auto border border-gray-300 shadow-sm">
-        <div class="px-6 py-6 md:px-12 md:py-12">
-          <form id="account-application-form">
-            {% include 'lead-capture-fields' %}
-            <div class="flex flex-row flex-wrap">
-              <div class="w-full lg:w-1/3 md:pr-4 text-lg"></div>
-              <div class="w-full lg:w-2/3 md:pl-4">
-                <button type="submit"
-                  class="bg-primary text-white text-xl font-bold py-4 px-12 rounded w-64 mx-auto lg:mx-0 block shadow-lg hover:opacity-75 disabled:opacity-50">
-                  Submit
-                </button>
+  <section class="bg-gray-100 py-12">
+    <div class="container mx-auto px-4 md:px-0">
+      <div class="max-w-4xl mx-auto">
+        <div class="">
+          {% form 'contact', id: "account-application-form" %}
+
+          <input type="text" class="hidden" name="contact[form_name]" value="Account Application" />
+
+          {% if form.errors != blank %}
+          {% assign has_message = true %}
+          {% assign message_type = 'error' %}
+          {% endif %}
+
+          {% if form.posted_successfully? %}
+          {% assign has_message = true %}
+          {% assign message_type = 'success' %}
+          {% endif %}
+
+          {% if has_message %}
+          <div class="max-w-4xl mx-auto mb-4">
+            <div class="message--{{ message_type }} mb-6">
+              {% case message_type %}
+              {% when 'success' %}
+              <div class="py-3 px-6 border-2 border-green-600 bg-green-100 text-green-600 font-semibold">
+                {{ 'contact.form.post_success' | t }}
+              </div>
+              {% when 'error' %}
+              <div class="py-3 px-6 border-2 border-red-600 bg-red-100 text-red-600 font-semibold">
+                {{ form.errors | default_errors }}
+              </div>
+              {% endcase %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% include 'lead-capture-fields' %}
+
+          <div class="mt-4 flex flex-row flex-wrap">
+            <div class="w-full lg:w-1/3 lg:pr-4 text-lg py-2">
+              <div class="font-bold leading-normal">Any message for us?</div>
+            </div>
+            <div class="w-full lg:w-2/3 px-6 py-6 bg-white border border-gray-300 rounded-sm shadow-sm">
+              <div class="flex flex-row flex-wrap">
+                <label class="w-full font-bold text-xs tracking-wide uppercase block mb-2 text-gray-500">Type your
+                  message or
+                  quetion here</label>
+                <textarea name="contact[message]" class="w-full py-3 px-5 border border-gray-400 rounded h-48 text-lg leading-normal"
+                  placeholder="Any message, quetions or comments...">I would like to apply for an account. Please get back to me as soon as possible.</textarea>
               </div>
             </div>
-          </form>
+          </div>
+
+          <div class="mt-8 flex flex-row flex-wrap">
+            <div class="w-full lg:w-1/3 md:pr-4 text-lg">&nbsp;</div>
+            <div class="w-full lg:w-2/3">
+              <button type="submit"
+                class="bg-primary text-white text-xl font-bold py-4 px-12 rounded w-64 mx-auto lg:mx-0 block shadow-lg hover:opacity-75 disabled:opacity-50">
+                Submit
+              </button>
+            </div>
+          </div>
+          {% endform %}
         </div>
       </div>
     </div>
@@ -36,54 +82,26 @@
 
   <script type="text/javascript">
     $(document).ready(function () {
-      console.log("[Register Page] Page is ready");
-      $("#account-application-form").on("submit", function (event) {
-        event.preventDefault();
-  
-        // Convert serialised data into indexed array
-        console.log("[Register Page] Serialised form data:", $(this).serializeArray());
-        var unindexed_array = $(this).serializeArray();
-        var indexed_array = {};
-  
-        $.map(unindexed_array, function (n, i) {
-          var label = n["name"];
-          var labelLast2 = label.slice(-2);
-          var value = n["value"];
-  
-          if (labelLast2 === '[]') {
-            var labelWithoutBrackets = label.slice(0, label.length - 2);
-            indexed_array[labelWithoutBrackets] = indexed_array[labelWithoutBrackets] || [];
-            indexed_array[labelWithoutBrackets].push(value);
-          } else {
-            indexed_array[label] = value;
-          }
-        });
-  
-        console.log("[Register Page] Indexed array:", indexed_array);
-  
-        // Disable all fields and button before submission
-        var submitButton = $(this).find('button[type=submit]').attr('disabled', true).css('cursor', 'wait');
-        var allInputFields = $(this).find('input').attr('disabled', true).css('cursor', 'wait');
-        var allTextareaFields = $(this).find('textarea').attr('disabled', true).css('cursor', 'wait');
-  
-        // Submit
-        $.post("/apps/rowmarknz-backend/form", {
-          formSubmission: {
-            formName: 'Account applications',
-            formContent: indexed_array
-          }
-        }).done(function (result) {
-          console.log("[Register Page] Done submit!", result);
-          window.location = '/pages/form-submission-thankyou';
-        })
-      });
-    })
-  </script>
+      console.log("===== Request Sample Page is ready =====");
 
-  <!-- www.123formbuilder.com script begins here -->
-  <!-- <script type="text/javascript" defer src="//www.123formbuilder.com/embed/2157190.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Register for online ordering">
-    </script> -->
-  <!-- www.123formbuilder.com script ends here -->
+      function joinRadioSelections(radioInputName, submittedInputName) {
+        $('[name="' + radioInputName + '"]').change(function (event) {
+          var allSelected = [];
+          $('[name="' + radioInputName + '"]:checked').each(function (i, e) {
+            allSelected.push($(e).val());
+          })
+          $('[name="' + submittedInputName + '"]').attr('value', allSelected.join(', '));
+        })
+      }
+
+      joinRadioSelections('select_markets', 'contact[markets]');
+      joinRadioSelections('select_equipments', 'contact[equipments]')
+
+      $('#sample-request-form').submit(function (event) {
+        console.log('[Sample Request Form] Submitted data:', $(this).serializeArray());
+      })
+    });
+  </script>
 
   {% comment %}
   // Disable. We use custom form to register, so that we can review their company details first, before they can have a
@@ -138,8 +156,8 @@
       <div class="form-field form-field--half">
         <input type="text"
           class="form-field-input form-field-text {% if form.errors contains 'email' %}form-field-error{% endif %}"
-          id="register_email" name="customer[email]" autocorrect="off" autocapitalize="off"
-          {% if form.email %}value="{{ form.email }}" {% endif %}>
+          id="register_email" name="customer[email]" autocorrect="off" autocapitalize="off" {% if form.email
+          %}value="{{ form.email }}" {% endif %}>
 
         <label class="form-field-title" for="register_email">
           {{ 'customers.forms.email' | t }}
