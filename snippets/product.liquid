@@ -6,9 +6,9 @@
     Is the snippet being loaded in a QuickShop
 {% endcomment %}
 
-{% assign customerForbidToSeePriceAndPlaceOrder = false %}
-{% if customer and customer.tags contains "Forbid To See Price" %}
-  {% assign customerForbidToSeePriceAndPlaceOrder = true %}
+{% assign customerAllowedToSeePriceAndPlaceOrder = false %}
+{% if customer and customer.tags contains "Account Customer" %}
+  {% assign customerAllowedToSeePriceAndPlaceOrder = true %}
 {% endif %}
 
 {% assign enable_social_sharing = settings.product_social_sharing %}
@@ -80,9 +80,7 @@
         </div>
       {% endif %}
 
-      {% if customerForbidToSeePriceAndPlaceOrder %}
-        <!-- Customer is tagged as "Forbid To See Price" and cannot see these information -->
-      {% else %}
+      {% if customerAllowedToSeePriceAndPlaceOrder %}
         <div class="product-pricing">
           {%
             include 'product-badge',

@@ -6,9 +6,9 @@
   @param selected_variant
 {% endcomment %}
 
-{% assign customerForbidToSeePriceAndPlaceOrder = false %} 
-{% if customer and customer.tags contains "Forbid To See Price" %}
-  {% assign customerForbidToSeePriceAndPlaceOrder = true %}
+{% assign customerAllowedToSeePriceAndPlaceOrder = false %} 
+{% if customer and customer.tags contains "Account Customer" %}
+  {% assign customerAllowedToSeePriceAndPlaceOrder = true %}
 {% endif %}
 
 <form method="post" action="/cart/add" data-product-form>
@@ -29,67 +29,63 @@
   	{%include 'cutting-and-adhesive-options'%}
   {% endunless %}
 
-  {% if customer %}
-    {% if customerForbidToSeePriceAndPlaceOrder %}
-        <!-- Customer is tagged as "Forbid To See Price" and cannot see these information -->
-    {% else %}
-      <div class="product-form--atc">
-        <div class="product-form--atc-qty form-fields--qty" data-quantity-wrapper>
-          <div class="form-field form-field--qty-select hidden">
-            <div class="form-field-select-wrapper">
-              <select
-                class="form-field-input form-field-select"
-                aria-label="{{ 'general.general.quantity' | t }}"
-                data-quantity-select
-              >
-                {% for i in (1..9) %}
-                  <option {% if i == 1 %}selected {% endif %}value="{{ i }}">
-                    {{ i }}
-                  </option>
-                {% endfor %}
-                <option value="10+">
-                  10+
-                </option>
-              </select>
-              <label class="form-field-title">
-                {{ 'general.general.quantity' | t }}
-              </label>
-              {% include 'icon-chevron-down-small' %}
-            </div>
-          </div>
-
-          <div class="form-field form-field--qty-input visible">
-            <input
-              class="form-field-input form-field-number form-field-filled"
-              value="1"
-              name="quantity"
-              type="text"
-              pattern="\d*"
+  {% if customerAllowedToSeePriceAndPlaceOrder %}
+    <div class="product-form--atc">
+      <div class="product-form--atc-qty form-fields--qty" data-quantity-wrapper>
+        <div class="form-field form-field--qty-select hidden">
+          <div class="form-field-select-wrapper">
+            <select
+              class="form-field-input form-field-select"
               aria-label="{{ 'general.general.quantity' | t }}"
-              data-quantity-input
+              data-quantity-select
             >
-            <label class="form-field-title">{{ 'general.general.quantity' | t }}</label>
+              {% for i in (1..9) %}
+                <option {% if i == 1 %}selected {% endif %}value="{{ i }}">
+                  {{ i }}
+                </option>
+              {% endfor %}
+              <option value="10+">
+                10+
+              </option>
+            </select>
+            <label class="form-field-title">
+              {{ 'general.general.quantity' | t }}
+            </label>
+            {% include 'icon-chevron-down-small' %}
           </div>
         </div>
 
-        <button id="addToCart"
-          class="product-form--atc-button {% unless selected_variant.available %}disabled{% endunless %}"
-          type="submit"
-          {% unless selected_variant.available %}disabled{% endunless %}
-          data-product-atc>
-          <span class="atc-button--text">
-            {% if selected_variant.available %}
-              {{ 'product.buttons.add_to_cart' | t }}
-            {% else %}
-              {{ 'product.buttons.sold_out' | t }}
-            {% endif %}
-          </span>
-          <span class="atc-button--icon">
-            {%- include 'icon-spinner' -%}
-          </span>
-        </button>
+        <div class="form-field form-field--qty-input visible">
+          <input
+            class="form-field-input form-field-number form-field-filled"
+            value="1"
+            name="quantity"
+            type="text"
+            pattern="\d*"
+            aria-label="{{ 'general.general.quantity' | t }}"
+            data-quantity-input
+          >
+          <label class="form-field-title">{{ 'general.general.quantity' | t }}</label>
+        </div>
       </div>
-    {% endif %}
+
+      <button id="addToCart"
+        class="product-form--atc-button {% unless selected_variant.available %}disabled{% endunless %}"
+        type="submit"
+        {% unless selected_variant.available %}disabled{% endunless %}
+        data-product-atc>
+        <span class="atc-button--text">
+          {% if selected_variant.available %}
+            {{ 'product.buttons.add_to_cart' | t }}
+          {% else %}
+            {{ 'product.buttons.sold_out' | t }}
+          {% endif %}
+        </span>
+        <span class="atc-button--icon">
+          {%- include 'icon-spinner' -%}
+        </span>
+      </button>
+    </div>
   {% else %}
     <p class="text-red-600 font-bold">Please login to order or register for online ordering</p>
   {% endif %}

@@ -9,9 +9,9 @@
 {% assign money_format = shop.money_format | strip_html %}
 {% assign show_modal = enable_quick_look %}
 
-{% assign customerForbidToSeePriceAndPlaceOrder = false %}
-{% if customer and customer.tags contains "Forbid To See Price" %}
-  {% assign customerForbidToSeePriceAndPlaceOrder = true %}
+{% assign customerAllowedToSeePriceAndPlaceOrder = false %}
+{% if customer and customer.tags contains "Account Customer" %}
+  {% assign customerAllowedToSeePriceAndPlaceOrder = true %}
 {% endif %}
 
 {% if product %}
@@ -98,9 +98,7 @@
     {% endcomment %}
 
     <div class="productitem--info">
-      {% if customerForbidToSeePriceAndPlaceOrder %}
-         <!-- Customer is tagged as "Forbid To See Price" and cannot see these information -->
-      {% else %}
+      {% if customerAllowedToSeePriceAndPlaceOrder %}
         {% if emphasize_price %}
           {{ product_item_price }}
         {% endif %}
@@ -112,9 +110,7 @@
         </a>
       </h2>
 
-      {% if customerForbidToSeePriceAndPlaceOrder %}
-         <!-- Customer is tagged as "Forbid To See Price" and cannot see these information -->
-      {% else %}
+      {% if customerAllowedToSeePriceAndPlaceOrder %}
         {% unless emphasize_price %}
           {{ product_item_price }}
         {% endunless %}
